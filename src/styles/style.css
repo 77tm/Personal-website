@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F5F5F5;
+  font-family: system-ui, sans-serif;
+  color: #1d1d1d;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
+}
+
+.header {
+  display: flex;
+  height: 96px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 32px 0 32px 0;
+  padding: 0 32px 0 32px;
+}
+.header .toggle-container {
+  background-color: white;
+  display: block;
+  cursor: pointer;
+  height: 32px;
+  width: 56px;
+  border-radius: 100px;
+  box-shadow: inset 0 0.2rem 6rem rgba(0, 0, 0, 0.1), inset 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1), inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.header .toggle-container .switch {
+  position: relative;
+  top: 4px;
+  height: 24px;
+  width: 24px;
+  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1), inset 0 0.4rem 0.4rem rgb(255, 255, 255), inset 0 -0.4rem 0.4rem rgb(255, 255, 255);
+  border-radius: 50%;
+}
+.header .toggle-container .switch .toggle {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.header .toggle-container .switch .toggle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.header .toggle-container .switch.dark {
+  margin-left: auto;
+  right: 4.5px;
+}
+.header .toggle-container .switch.light {
+  left: 4.5px;
+}
+.header nav {
+  background-color: #EBEBEB;
+  border-radius: 100px;
+  justify-content: center;
+  cursor: pointer;
+}
+.header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+  padding: 4px 5px;
+}
+.header nav ul .filter {
+  padding: 7px 16px;
+  border-radius: 100px;
+}
+.header nav ul .filter.active {
+  background-color: white;
+}
+.header a {
+  text-decoration: none;
+  color: #1d1d1d;
+}
+.header .nav-btn {
+  border: none;
+  cursor: pointer;
+  padding: 11px 4px 11px 4px;
+  background: linear-gradient(45deg, #e36577, #f6edb2);
+  border-radius: 100px;
+  transition: transform 0.4s ease-in-out;
+}
+.header .nav-btn span {
+  background-color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 100px;
+}
+.header .nav-btn:hover {
+  transform: scale(1.05);
+}
+
+.banner {
+  height: 30px;
+  background-color: #f7df1e;
+  width: 100vw;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(4, 266px);
+  grid-template-rows: repeat(6, 266px);
+  gap: 24px;
+  margin-bottom: 80px;
+  justify-content: center;
+  margin-top: 80px;
+  grid-auto-flow: dense;
+}
+
+.card, .project-card, .skills-card, .social-card, .about-me-card {
+  background-color: white;
+  border-radius: 32px;
+  box-shadow: 0px 0px 20px #efefef;
+  text-align: center;
+}
+.card h2, .project-card h2, .skills-card h2, .social-card h2, .about-me-card h2 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 20px;
+}
+.card p, .project-card p, .skills-card p, .social-card p, .about-me-card p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1d1d1d;
+  line-height: 1.5em;
+  margin: 20px 30px 0 30px;
+  text-align: center;
+}
+
+.about-me-card {
+  grid-column: span 2;
+}
+.about-me-card h1 {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-top: 16px;
+  background: linear-gradient(45deg, #e36577, #f6edb2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+}
+.about-me-card h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+.about-me-card p {
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  width: 48ch;
+}
+.about-me-card .btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 22px;
+}
+.about-me-card .btn-container a {
+  text-decoration: none;
+  color: #1d1d1d;
+}
+.about-me-card .btn-container .work-btn {
+  border: none;
+  cursor: pointer;
+  padding: 11px 4px 11px 4px;
+  background: linear-gradient(45deg, #e36577, #f6edb2);
+  border-radius: 100px;
+}
+.about-me-card .btn-container .work-btn span {
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: 100px;
+}
+.about-me-card .btn-container .see-more-btn {
+  border: none;
+  cursor: pointer;
+  background-color: rgb(229, 229, 229);
+  border-radius: 100px;
+  padding: 11px 4px 11px 4px;
+}
+.about-me-card .btn-container .see-more-btn span {
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: 100px;
+}
+
+.social-card a {
+  width: 100%;
+  height: 100%;
+}
+.social-card img {
+  width: 100%;
+  height: 100%;
+  scale: 0.3;
+}
+
+.social-card:hover {
+  cursor: pointer;
+  scale: 1.01;
+}
+
+.instagram {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+
+.facebook {
+  background-color: #1887F2;
+}
+
+.github {
+  background-color: #2b2b2b;
+  grid-column: span 2;
+}
+.github img {
+  width: 50%;
+}
+
+.linkedin {
+  background-color: #0A66C2;
+}
+
+.twitterx {
+  background-color: #000000;
+}
+.twitterx img {
+  scale: 0.4;
+}
+
+.skills-card {
+  grid-row: span 2;
+}
+.skills-card .skill-div {
+  display: flex;
+  margin: 17px;
+  align-items: center;
+  margin-left: 50px;
+}
+.skills-card .skill-div h5 {
+  color: #1d1d1d;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+.skills-card img {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}
+
+.card a, .project-card a, .about-me-card a, .social-card a, .skills-card a {
+  text-decoration: none;
+  color: #1d1d1d;
+}
+.card .btn-container-small-card, .project-card .btn-container-small-card, .about-me-card .btn-container-small-card, .social-card .btn-container-small-card, .skills-card .btn-container-small-card {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 22px;
+  margin-top: 10px;
+}
+.card .projects-btn, .project-card .projects-btn, .about-me-card .projects-btn, .social-card .projects-btn, .skills-card .projects-btn {
+  border: none;
+  cursor: pointer;
+  background-color: rgb(229, 229, 229);
+  border-radius: 100px;
+  padding: 11px 4px 11px 4px;
+}
+.card .projects-btn span, .project-card .projects-btn span, .about-me-card .projects-btn span, .social-card .projects-btn span, .skills-card .projects-btn span {
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: 100px;
+}
+
+.project-card {
+  grid-row: span 2;
+}/*# sourceMappingURL=style.css.map */
