@@ -260,7 +260,7 @@ body {
 }
 .skills-card .skill-div {
   display: flex;
-  margin: 17px;
+  margin: 13px;
   align-items: center;
   margin-left: 50px;
 }
@@ -303,4 +303,51 @@ body {
 
 .project-card {
   grid-row: span 2;
+  padding: 32px;
+  text-align: left;
+}
+.project-card p {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  color: #6e6e6e;
+  pointer-events: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.project-card h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.project-card .project-card-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 7px;
+}
+.project-card .project-card-icons img {
+  height: 25px;
+}
+.project-card .project-img-container {
+  display: flex;
+  height: 270px;
+  width: 202px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0;
+  justify-content: start;
+  align-items: center;
+}
+.project-card .project-img-container img {
+  max-height: 100%;
+  margin-left: -30px;
+}
+.project-card .project-btn {
+  display: flex;
+  justify-content: center;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */
