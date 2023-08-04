@@ -98,15 +98,15 @@ body {
   border-radius: 100px;
   transition: transform 0.4s ease-in-out;
 }
+.header .nav-btn:hover {
+  transform: scale(1.05);
+}
 .header .nav-btn span {
   background-color: white;
   font-size: 16px;
   font-weight: 600;
   padding: 7px 16px;
   border-radius: 100px;
-}
-.header .nav-btn:hover {
-  transform: scale(1.05);
 }
 
 .banner {
@@ -129,24 +129,27 @@ body {
   grid-auto-flow: dense;
 }
 
-.card, .project-card, .skills-card, .social-card, .about-me-card {
+.card, .hardware-card, .music-card, .project-card, .skills-card, .social-card, .about-me-card {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   border-radius: 32px;
   box-shadow: 0px 0px 20px #efefef;
   text-align: center;
 }
-.card h2, .project-card h2, .skills-card h2, .social-card h2, .about-me-card h2 {
+.card h2, .hardware-card h2, .music-card h2, .project-card h2, .skills-card h2, .social-card h2, .about-me-card h2 {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.5px;
   margin: 20px;
+  margin-bottom: 10px;
 }
-.card p, .project-card p, .skills-card p, .social-card p, .about-me-card p {
+.card p, .hardware-card p, .music-card p, .project-card p, .skills-card p, .social-card p, .about-me-card p {
   font-size: 16px;
   font-weight: 400;
   color: #1d1d1d;
   line-height: 1.5em;
-  margin: 20px 30px 0 30px;
+  margin: 0px 30px 0 30px;
   text-align: center;
 }
 
@@ -190,6 +193,10 @@ body {
   padding: 11px 4px 11px 4px;
   background: linear-gradient(45deg, #e36577, #f6edb2);
   border-radius: 100px;
+  transition: transform 0.4s ease-in-out;
+}
+.about-me-card .btn-container .work-btn:hover {
+  transform: scale(1.05);
 }
 .about-me-card .btn-container .work-btn span {
   background-color: white;
@@ -204,6 +211,7 @@ body {
   background-color: rgb(229, 229, 229);
   border-radius: 100px;
   padding: 11px 4px 11px 4px;
+  transition: transform 0.4s ease-in-out;
 }
 .about-me-card .btn-container .see-more-btn span {
   background-color: white;
@@ -211,6 +219,9 @@ body {
   font-weight: 500;
   padding: 7px 16px;
   border-radius: 100px;
+}
+.about-me-card .btn-container .see-more-btn:hover {
+  transform: scale(1.05);
 }
 
 .social-card a {
@@ -225,7 +236,12 @@ body {
 
 .social-card:hover {
   cursor: pointer;
-  scale: 1.01;
+}
+.social-card:hover img {
+  transition: transform 0.4s ease-in-out;
+}
+.social-card:hover img:hover {
+  transform: scale(1.05);
 }
 
 .instagram {
@@ -239,6 +255,7 @@ body {
 .github {
   background-color: #2b2b2b;
   grid-column: span 2;
+  align-items: center;
 }
 .github img {
   width: 50%;
@@ -257,10 +274,10 @@ body {
 
 .skills-card {
   grid-row: span 2;
+  gap: 13px;
 }
 .skills-card .skill-div {
   display: flex;
-  margin: 13px;
   align-items: center;
   margin-left: 50px;
 }
@@ -275,30 +292,34 @@ body {
   margin-right: 20px;
 }
 
-.card a, .project-card a, .about-me-card a, .social-card a, .skills-card a {
+.card a, .hardware-card a, .music-card a, .project-card a, .about-me-card a, .social-card a, .skills-card a {
   text-decoration: none;
   color: #1d1d1d;
 }
-.card .btn-container-small-card, .project-card .btn-container-small-card, .about-me-card .btn-container-small-card, .social-card .btn-container-small-card, .skills-card .btn-container-small-card {
+.card .btn-container-small-card, .hardware-card .btn-container-small-card, .music-card .btn-container-small-card, .project-card .btn-container-small-card, .about-me-card .btn-container-small-card, .social-card .btn-container-small-card, .skills-card .btn-container-small-card {
   display: flex;
   justify-content: center;
   gap: 16px;
   margin-top: 22px;
   margin-top: 10px;
 }
-.card .projects-btn, .project-card .projects-btn, .about-me-card .projects-btn, .social-card .projects-btn, .skills-card .projects-btn {
+.card .projects-btn, .hardware-card .projects-btn, .music-card .projects-btn, .project-card .projects-btn, .about-me-card .projects-btn, .social-card .projects-btn, .skills-card .projects-btn {
   border: none;
   cursor: pointer;
   background-color: rgb(229, 229, 229);
   border-radius: 100px;
   padding: 11px 4px 11px 4px;
+  transition: transform 0.4s ease-in-out;
 }
-.card .projects-btn span, .project-card .projects-btn span, .about-me-card .projects-btn span, .social-card .projects-btn span, .skills-card .projects-btn span {
+.card .projects-btn span, .hardware-card .projects-btn span, .music-card .projects-btn span, .project-card .projects-btn span, .about-me-card .projects-btn span, .social-card .projects-btn span, .skills-card .projects-btn span {
   background-color: white;
   font-size: 16px;
   font-weight: 500;
   padding: 7px 16px;
   border-radius: 100px;
+}
+.card .projects-btn:hover, .hardware-card .projects-btn:hover, .music-card .projects-btn:hover, .project-card .projects-btn:hover, .about-me-card .projects-btn:hover, .social-card .projects-btn:hover, .skills-card .projects-btn:hover {
+  transform: scale(1.05);
 }
 
 .project-card {
@@ -350,4 +371,48 @@ body {
   display: flex;
   justify-content: center;
   height: auto;
+  margin-top: auto;
+}
+
+.music-card {
+  grid-column: span 2;
+}
+.music-card img {
+  height: 100px;
+}
+
+.hardware-card {
+  grid-column: span 2;
+  padding: 32px;
+  text-align: left;
+}
+.hardware-card h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0px 0px 20px 0;
+}
+.hardware-card .hardware-item {
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-left: 0;
+}
+.hardware-card .hardware-grid {
+  display: flex;
+}
+.hardware-card .hardware-grid-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+.hardware-card .hardware-grid-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.hardware-card img {
+  max-height: 150px;
 }/*# sourceMappingURL=style.css.map */

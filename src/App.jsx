@@ -1,15 +1,16 @@
 import React from "react"
-// import Card from "./components/Card"
 import Header from "./components/Header"
 import Main from "./components/Main"
 
 function App() {
 
+  const [activeItem, setActiveItem] = React.useState("all");
+
   return (
     <>
     
     <div className="app">
-      <Header />
+      <Header activeItem={activeItem} setActiveItem={setActiveItem} />
     </div>
 
     <div className="banner">
@@ -17,7 +18,7 @@ function App() {
     </div>
 
     <div className="app">
-      <Main />
+      <Main activeItem={activeItem} />
     </div>
 
     </>

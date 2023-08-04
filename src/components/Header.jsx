@@ -2,14 +2,14 @@ import React from "react";
 import sun from '/public/sun-icon.svg'
 import moon from '/public/moon-icon.svg'
 
-export default function Header() {
+export default function Header({activeItem, setActiveItem}) {
     const [darkMode, setDarkMode] = React.useState(false);
 
     function switchMode() {
         setDarkMode(prevMode => !prevMode);
     }
 
-    const [activeItem, setActiveItem] = React.useState('item1');
+    // const [activeItem, setActiveItem] = React.useState('item1');
 
     const handleItemClick = (itemId) => {
         setActiveItem(itemId);
@@ -27,11 +27,11 @@ export default function Header() {
                 </div>
                 <nav>
                         <ul>
-                            <li className={`filter ${activeItem === 'item1' ? 'active' : ''}`} onClick={() => handleItemClick('item1')}>All</li>
-                            <li className={`filter ${activeItem === 'item2' ? 'active' : ''}`} onClick={() => handleItemClick('item2')}>About</li>
-                            <li className={`filter ${activeItem === 'item3' ? 'active' : ''}`} onClick={() => handleItemClick('item3')}>Projects</li>
-                            <li className={`filter ${activeItem === 'item4' ? 'active' : ''}`} onClick={() => handleItemClick('item4')}>Media</li>
-                            <li className={`filter ${activeItem === 'item5' ? 'active' : ''}`} onClick={() => handleItemClick('item5')}>Running</li>
+                            <li className={`filter ${activeItem === 'all' ? 'active' : ''}`} onClick={() => setActiveItem('all')}>All</li>
+                            <li className={`filter ${activeItem === 'about' ? 'active' : ''}`} onClick={() => setActiveItem('about')}>About</li>
+                            <li className={`filter ${activeItem === 'projects' ? 'active' : ''}`} onClick={() => setActiveItem('projects')}>Projects</li>
+                            <li className={`filter ${activeItem === 'media' ? 'active' : ''}`} onClick={() => setActiveItem('media')}>Media</li>
+                            <li className={`filter ${activeItem === 'setup' ? 'active' : ''}`} onClick={() => setActiveItem('setup')}>Setup</li>
                         </ul>
                 </nav>
                 <a className="nav-btn" href="mailto:tmadzuls@gmail.com">
