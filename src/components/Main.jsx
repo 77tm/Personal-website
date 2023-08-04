@@ -18,7 +18,7 @@ import bookslv from "/public/bookslv.png"
 
 
 
-export default function Main({activeItem}) {
+export default function Main({activeItem, setActiveItem}) {
     const text= "Hey! I'm Toms, and my goal is to work at a company where I can deliver business value while levelling up my skills as a developer."
     const moreText = `I believe that web development is an ever-evolving field, and I am constantly seeking new challenges and opportunities to expand 
     my knowledge and expertise. Whether it's learning the latest frontend frameworks like React, Vue, or Angular, or diving deep into backend technologies 
@@ -29,12 +29,14 @@ export default function Main({activeItem}) {
     const ferrariSKills = ["HTML5", "CSS", "JavaScript ES6"];
     const portfolioSkills = ["HTML5" , "CSS", "JavaScript ES6", "React", "Sass"];
 
+
+
     return (
         <div className="main-container">
 
             {activeItem === "all" && (
             <>
-                <AboutMeCard title="Toms Madzuls" subTitle="Year 2 Computer science student in Riga" text={text} moreText={moreText} moreText2={moreText2}/>
+                <AboutMeCard setActiveItem={setActiveItem} title="Toms Madzuls" subTitle="Year 2 Computer science student in Riga" text={text} moreText={moreText} moreText2={moreText2}/>
                 <SmallTextCard className='card' title="Since 2021" text="Since embarking on my coding journey in 2021, I have found my true passion to be the captivating realm of web development." />
                 <SkillsCard />
                 <HardwareCard />
@@ -51,7 +53,7 @@ export default function Main({activeItem}) {
 
             {activeItem === "about" && (
             <>
-                <AboutMeCard title="Toms Madzuls" subTitle="Year 2 Computer science student in Riga" text={text} moreText={moreText} moreText2={moreText2}/>
+                <AboutMeCard setActiveItem={setActiveItem} title="Toms Madzuls" subTitle="Year 2 Computer science student in Riga" text={text} moreText={moreText} moreText2={moreText2}/>
                 <SmallTextCard className='card' title="Since 2021" text="Since embarking on my coding journey in 2021, I have found my true passion to be the captivating realm of web development." />
                 <SkillsCard />
                 <SocialCard className='social-card instagram' icon={instagram} link="https://www.instagram.com/madzuls/"/>
@@ -59,6 +61,13 @@ export default function Main({activeItem}) {
                 <SocialCard className='social-card github' icon={github} link="https://github.com/77tm"/>
                 <SocialCard className='social-card linkedin' icon={linkedin} link="https://www.linkedin.com/in/toms-mad%C5%BEuls-ba5a56239/"/>
                 <SocialCard className='social-card twitterx' icon={twitterx} link="https://twitter.com/tmadzuls"/>
+
+
+                {/* <HardwareCard />
+                <ProjectCard projectName="TomsOS" projectImg={portfolioWebsite} skillsArray={portfolioSkills}/>
+                <ProjectCard projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills}/>
+                <ProjectCard projectName="Ferrari page" projectImg={ferrariWebsite} skillsArray={ferrariSKills}/> */}
+
             </>
             )}
 
@@ -67,7 +76,7 @@ export default function Main({activeItem}) {
                 <ProjectCard projectName="TomsOS" projectImg={portfolioWebsite} skillsArray={portfolioSkills}/>
                 <ProjectCard projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills}/>
                 <ProjectCard projectName="Ferrari page" projectImg={ferrariWebsite} skillsArray={ferrariSKills}/>
-                <AboutMeCard title="Toms Madzuls" subTitle="Year 2 Computer science student in Riga" text={text} moreText={moreText} moreText2={moreText2}/>
+                <AboutMeCard setActiveItem={setActiveItem} title="Toms Madzuls" subTitle="Year 2 Computer science student in Riga" text={text} moreText={moreText} moreText2={moreText2}/>
                 <SocialCard className='social-card github' icon={github} link="https://github.com/77tm"/>
                 <SkillsCard />
                 <SmallTextCard className='card' title="Since 2021" text="Since embarking on my coding journey in 2021, I have found my true passion to be the captivating realm of web development." />
@@ -77,7 +86,7 @@ export default function Main({activeItem}) {
 
             {activeItem === "media" && (
             <>
-                <AboutMeCard title="Toms Madzuls" subTitle="Year 2 Computer science student in Riga" text={text} moreText={moreText} moreText2={moreText2}/>
+                <AboutMeCard setActiveItem={setActiveItem} title="Toms Madzuls" subTitle="Year 2 Computer science student in Riga" text={text} moreText={moreText} moreText2={moreText2}/>
                 <SocialCard className='social-card instagram' icon={instagram} link="https://www.instagram.com/madzuls/"/>
                 <SocialCard className='social-card facebook' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>
                 <SocialCard className='social-card github' icon={github} link="https://github.com/77tm"/>
@@ -95,6 +104,7 @@ export default function Main({activeItem}) {
                 <SocialCard className='social-card twitterx' icon={twitterx} link="https://twitter.com/tmadzuls"/>
             </>
             )}
+
 
 
             {/* <AboutMeCard title="Toms Madzuls" subTitle="Year 2 Computer science student in Riga" text={text} moreText={moreText} moreText2={moreText2}/>

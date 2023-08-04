@@ -2,8 +2,7 @@ import React from "react";
 import sun from '/public/sun-icon.svg'
 import moon from '/public/moon-icon.svg'
 
-export default function Header({activeItem, setActiveItem}) {
-    const [darkMode, setDarkMode] = React.useState(false);
+export default function Header({activeItem, setActiveItem, darkMode, setDarkMode}) {
 
     function switchMode() {
         setDarkMode(prevMode => !prevMode);
@@ -11,9 +10,9 @@ export default function Header({activeItem, setActiveItem}) {
 
     // const [activeItem, setActiveItem] = React.useState('item1');
 
-    const handleItemClick = (itemId) => {
-        setActiveItem(itemId);
-    };
+    // const handleItemClick = (itemId) => {
+    //     setActiveItem(itemId);
+    // };
 
     return (
         <>

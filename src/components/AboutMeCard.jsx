@@ -7,6 +7,10 @@ export default function AboutMeCard(props) {
         setIsBig(prev => !prev);
     };
 
+    const handleWorkBtnClick = () => {
+        props.setActiveItem("projects"); // Set activeItem to "projects" to navigate to the "Projects" tab
+    };
+
     return (
         <div className='about-me-card' style={{gridRow: isBig ? 'span 2' : 'span 1'}}>
             <h1>{props.title}</h1>
@@ -15,7 +19,7 @@ export default function AboutMeCard(props) {
             <p style={{display: isBig ? 'block' : 'none' }}>{props.moreText}</p>
             <p style={{display: isBig ? 'block' : 'none' }}>{props.moreText2}</p>
             <div className="btn-container">
-                <a className="work-btn" href="#">
+                <a onClick={handleWorkBtnClick} className="work-btn" href="#">
                     <span>See my work</span>
                 </a>
                 <a onClick={handleClick} className="see-more-btn" href="#">
