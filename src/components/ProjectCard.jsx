@@ -7,7 +7,7 @@ export default function ProjectCard(props) {
     const filteredSkills = skillsData.filter(skill => props.skillsArray.includes(skill.name));
 
     return (
-        <div className="project-card">
+        <div className={props.className}>
             <p>PROJECT</p>
             <h2>{props.projectName}</h2>
             <p>BUILT WITH</p>

@@ -12,7 +12,7 @@ export default function AboutMeCard(props) {
     };
 
     return (
-        <div className='about-me-card' style={{gridRow: isBig ? 'span 2' : 'span 1'}}>
+        <div className={props.className} style={{gridRow: isBig ? 'span 2' : 'span 1'}}>
             <h1>{props.title}</h1>
             <h3>{props.subTitle}</h3>
             <p>{props.text}</p>

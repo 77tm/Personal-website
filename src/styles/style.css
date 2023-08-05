@@ -124,7 +124,7 @@ body {
   grid-auto-flow: dense;
 }
 
-.card, .hardware-card, .music-card, .project-card, .skills-card, .social-card, .about-me-card {
+.card, .hardware-card, .music-card, .project-card, .small-text-card, .img-card, .skills-card, .social-card, .about-me-card {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -132,14 +132,14 @@ body {
   box-shadow: 0px 0px 20px #efefef;
   text-align: center;
 }
-.card h2, .hardware-card h2, .music-card h2, .project-card h2, .skills-card h2, .social-card h2, .about-me-card h2 {
+.card h2, .hardware-card h2, .music-card h2, .project-card h2, .small-text-card h2, .img-card h2, .skills-card h2, .social-card h2, .about-me-card h2 {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.5px;
   margin: 20px;
   margin-bottom: 10px;
 }
-.card p, .hardware-card p, .music-card p, .project-card p, .skills-card p, .social-card p, .about-me-card p {
+.card p, .hardware-card p, .music-card p, .project-card p, .small-text-card p, .img-card p, .skills-card p, .social-card p, .about-me-card p {
   font-size: 16px;
   font-weight: 400;
   color: #1d1d1d;
@@ -150,6 +150,9 @@ body {
 
 .about-me-card {
   grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 .about-me-card h1 {
   font-size: 52px;
@@ -158,6 +161,7 @@ body {
   margin-top: 16px;
   background: linear-gradient(45deg, #e36577, #f6edb2);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   pointer-events: none;
 }
@@ -176,7 +180,15 @@ body {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-top: 22px;
+  position: absolute;
+  bottom: 25px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+@media (max-width: 1199px) {
+  .about-me-card .btn-container {
+    bottom: 15px;
+  }
 }
 .about-me-card .btn-container a {
   text-decoration: none;
@@ -216,8 +228,12 @@ body {
   border-radius: 100px;
 }
 @media (max-width: 1199px) {
+  .about-me-card .btn-container .see-more-btn {
+    padding: 7px 4px 10px 4px;
+  }
   .about-me-card .btn-container .see-more-btn span {
-    font-size: 13.5px;
+    font-size: 12.5px;
+    padding: 6px 12px;
   }
 }
 .about-me-card .btn-container .see-more-btn:hover {
@@ -274,12 +290,16 @@ body {
 
 .skills-card {
   grid-row: span 2;
-  gap: 13px;
+  gap: 12px;
+}
+.skills-card h2 {
+  text-align: left;
+  margin-left: 30px;
 }
 .skills-card .skill-div {
   display: flex;
   align-items: center;
-  margin-left: 50px;
+  margin-left: 30px;
 }
 .skills-card .skill-div h5 {
   letter-spacing: 0.3px;
@@ -291,18 +311,16 @@ body {
   margin-right: 20px;
 }
 
-.card a, .hardware-card a, .music-card a, .project-card a, .about-me-card a, .social-card a, .skills-card a {
+.img-card img {
+  border-radius: 32px;
+  opacity: 95%;
+}
+
+.card a, .hardware-card a, .music-card a, .project-card a, .small-text-card a, .about-me-card a, .social-card a, .skills-card a, .img-card a {
   text-decoration: none;
   color: #1d1d1d;
 }
-.card .btn-container-small-card, .hardware-card .btn-container-small-card, .music-card .btn-container-small-card, .project-card .btn-container-small-card, .about-me-card .btn-container-small-card, .social-card .btn-container-small-card, .skills-card .btn-container-small-card {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 22px;
-  margin-top: 10px;
-}
-.card .projects-btn, .hardware-card .projects-btn, .music-card .projects-btn, .project-card .projects-btn, .about-me-card .projects-btn, .social-card .projects-btn, .skills-card .projects-btn {
+.card .projects-btn, .hardware-card .projects-btn, .music-card .projects-btn, .project-card .projects-btn, .small-text-card .projects-btn, .about-me-card .projects-btn, .social-card .projects-btn, .skills-card .projects-btn, .img-card .projects-btn {
   border: none;
   cursor: pointer;
   background-color: rgb(229, 229, 229);
@@ -310,7 +328,7 @@ body {
   padding: 11px 4px 11px 4px;
   transition: transform 0.4s ease-in-out;
 }
-.card .projects-btn span, .hardware-card .projects-btn span, .music-card .projects-btn span, .project-card .projects-btn span, .about-me-card .projects-btn span, .social-card .projects-btn span, .skills-card .projects-btn span {
+.card .projects-btn span, .hardware-card .projects-btn span, .music-card .projects-btn span, .project-card .projects-btn span, .small-text-card .projects-btn span, .about-me-card .projects-btn span, .social-card .projects-btn span, .skills-card .projects-btn span, .img-card .projects-btn span {
   background-color: white;
   font-size: 16px;
   font-weight: 500;
@@ -318,12 +336,26 @@ body {
   border-radius: 100px;
 }
 @media (max-width: 1199px) {
-  .card .projects-btn span, .hardware-card .projects-btn span, .music-card .projects-btn span, .project-card .projects-btn span, .about-me-card .projects-btn span, .social-card .projects-btn span, .skills-card .projects-btn span {
-    font-size: 13.5px;
+  .card .projects-btn, .hardware-card .projects-btn, .music-card .projects-btn, .project-card .projects-btn, .small-text-card .projects-btn, .about-me-card .projects-btn, .social-card .projects-btn, .skills-card .projects-btn, .img-card .projects-btn {
+    padding: 7px 4px 10px 4px;
+  }
+  .card .projects-btn span, .hardware-card .projects-btn span, .music-card .projects-btn span, .project-card .projects-btn span, .small-text-card .projects-btn span, .about-me-card .projects-btn span, .social-card .projects-btn span, .skills-card .projects-btn span, .img-card .projects-btn span {
+    font-size: 12.5px;
+    padding: 6px 12px;
   }
 }
-.card .projects-btn:hover, .hardware-card .projects-btn:hover, .music-card .projects-btn:hover, .project-card .projects-btn:hover, .about-me-card .projects-btn:hover, .social-card .projects-btn:hover, .skills-card .projects-btn:hover {
+.card .projects-btn:hover, .hardware-card .projects-btn:hover, .music-card .projects-btn:hover, .project-card .projects-btn:hover, .small-text-card .projects-btn:hover, .about-me-card .projects-btn:hover, .social-card .projects-btn:hover, .skills-card .projects-btn:hover, .img-card .projects-btn:hover {
   transform: scale(1.05);
+}
+
+.small-text-card {
+  position: relative;
+}
+.small-text-card .btn-container-small-card {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding-bottom: 25px;
 }
 
 .project-card {
@@ -442,6 +474,16 @@ body {
     grid-template-columns: repeat(4, 216px);
     grid-template-rows: repeat(6, 216px);
   }
+  .header nav ul {
+    font-size: 14.5px;
+  }
+  .header .nav-btn {
+    padding: 10px 4px 11px 4px;
+  }
+  .header .nav-btn span {
+    font-size: 14.5px;
+    padding: 7px 16px;
+  }
   .about-me-card h1 {
     font-size: 38px;
   }
@@ -453,6 +495,315 @@ body {
   .about-me-card p {
     font-size: 13.5px;
     width: 48ch;
+  }
+  .about-me-card .btn-container .work-btn {
+    padding: 7px 4px 6px 4px;
+  }
+  .about-me-card .btn-container .work-btn span {
+    font-size: 12.5px;
+    padding: 6px 12px;
+  }
+  .card h2, .about-me-card h2, .social-card h2, .skills-card h2, .img-card h2, .small-text-card h2, .project-card h2, .music-card h2, .hardware-card h2 {
+    font-size: 23px;
+  }
+  .skills-card {
+    gap: 11px;
+  }
+  .skills-card h2 {
+    margin-bottom: 0px;
+  }
+  .skills-card .skill-div {
+    margin-left: 30px;
+  }
+  .skills-card .skill-div h5 {
+    font-size: 12px;
+  }
+  .skills-card img {
+    height: 25px;
+    width: 25px;
+    margin-right: 17px;
+  }
+  .small-text-card p {
+    font-size: 13.5px;
+    margin: 0px 20px;
+  }
+  .small-text-card .btn-container-small-card {
+    margin-top: auto;
+    padding-bottom: 15px;
+  }
+  .hardware-card h2 {
+    margin: 0px 0px 16px 0;
+  }
+  .hardware-card .hardware-item {
+    font-size: 20px;
+  }
+  .hardware-card img {
+    max-height: 125px;
+  }
+  .project-card p {
+    font-size: 11.5px;
+  }
+  .project-card .project-card-icons img {
+    height: 20px;
+  }
+  .project-card .project-img-container {
+    height: 210px;
+    width: 152px;
+  }
+}
+@media (max-width: 999px) {
+  .page {
+    max-width: 800px;
+  }
+  .header {
+    max-width: 800px;
+  }
+  .main-container {
+    max-width: 800px;
+    grid-template-columns: repeat(3, 229px);
+    grid-template-rows: repeat(8, 229px);
+  }
+  .about-me-card h1 {
+    font-size: 40px;
+  }
+  .about-me-card p {
+    font-size: 14.5px;
+    width: 47ch;
+  }
+  .card h2, .about-me-card h2, .social-card h2, .skills-card h2, .img-card h2, .small-text-card h2, .project-card h2, .music-card h2, .hardware-card h2 {
+    font-size: 25px;
+  }
+  .skills-card {
+    gap: 11.5px;
+  }
+  .skills-card h2 {
+    margin-bottom: 7px;
+  }
+  .skills-card .skill-div h5 {
+    font-size: 13px;
+  }
+  .small-text-card p {
+    font-size: 14px;
+  }
+  .hardware-card h2 {
+    margin: 0px 0px 16px 0;
+  }
+  .hardware-card .hardware-item {
+    font-size: 20px;
+  }
+  .hardware-card img {
+    max-height: 125px;
+  }
+  .project-card p {
+    font-size: 11.5px;
+  }
+  .project-card .project-card-icons img {
+    height: 20px;
+  }
+  .project-card .project-img-container {
+    height: 210px;
+    width: 170px;
+  }
+}
+@media (max-width: 799px) {
+  .page {
+    max-width: 482px;
+  }
+  .main-container {
+    max-width: 482px;
+    grid-template-columns: repeat(2, 229px);
+    grid-template-rows: repeat(12, 229px);
+  }
+  .header {
+    max-width: 482px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: auto;
+    gap: 32px;
+    margin-bottom: 74px;
+    align-self: center;
+    margin-left: auto;
+  }
+  .header .toggle-container {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: start;
+  }
+  .header nav {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    justify-self: center;
+    position: relative;
+  }
+  .header nav ul {
+    font-size: 14.5px;
+    gap: 13.5px;
+  }
+  .header .nav-btn {
+    padding: 10px 4px 11px 4px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+  }
+  .header .nav-btn span {
+    font-size: 14.5px;
+    padding: 7px 16px;
+  }
+  .about-me-card h1 {
+    font-size: 38px;
+  }
+  .about-me-card h3 {
+    font-size: 18px;
+    margin-top: 4px;
+    margin-bottom: -6px;
+  }
+  .about-me-card p {
+    font-size: 13.5px;
+    width: 48ch;
+  }
+  .about-me-card .btn-container .work-btn {
+    padding: 7px 4px 6px 4px;
+  }
+  .about-me-card .btn-container .work-btn span {
+    font-size: 12.5px;
+    padding: 6px 12px;
+  }
+  .card h2, .about-me-card h2, .social-card h2, .skills-card h2, .img-card h2, .small-text-card h2, .project-card h2, .music-card h2, .hardware-card h2 {
+    font-size: 23px;
+  }
+  .skills-card {
+    gap: 13px;
+  }
+  .skills-card h2 {
+    margin-bottom: 0px;
+  }
+  .skills-card .skill-div {
+    margin-left: 30px;
+  }
+  .skills-card .skill-div h5 {
+    font-size: 12px;
+  }
+  .skills-card img {
+    height: 25px;
+    width: 25px;
+    margin-right: 17px;
+  }
+  .small-text-card p {
+    font-size: 13.5px;
+    margin: 0px 20px;
+  }
+  .small-text-card .btn-container-small-card {
+    margin-top: auto;
+    padding-bottom: 15px;
+  }
+  .hardware-card h2 {
+    margin: 0px 0px 16px 0;
+  }
+  .hardware-card .hardware-item {
+    font-size: 20px;
+  }
+  .hardware-card img {
+    max-height: 125px;
+  }
+  .project-card p {
+    font-size: 11.5px;
+  }
+  .project-card .project-card-icons img {
+    height: 20px;
+  }
+  .project-card .project-img-container {
+    height: 210px;
+    width: 172px;
+  }
+}
+@media (max-width: 545px) {
+  .page {
+    max-width: 1000px;
+  }
+  .header {
+    max-width: 1000px;
+  }
+  .main-container {
+    max-width: 1000px;
+    grid-template-columns: repeat(4, 216px);
+    grid-template-rows: repeat(6, 216px);
+  }
+  .header nav ul {
+    font-size: 14.5px;
+  }
+  .header .nav-btn {
+    padding: 10px 4px 11px 4px;
+  }
+  .header .nav-btn span {
+    font-size: 14.5px;
+    padding: 7px 16px;
+  }
+  .about-me-card h1 {
+    font-size: 38px;
+  }
+  .about-me-card h3 {
+    font-size: 18px;
+    margin-top: 4px;
+    margin-bottom: -6px;
+  }
+  .about-me-card p {
+    font-size: 13.5px;
+    width: 48ch;
+  }
+  .about-me-card .btn-container .work-btn {
+    padding: 7px 4px 6px 4px;
+  }
+  .about-me-card .btn-container .work-btn span {
+    font-size: 12.5px;
+    padding: 6px 12px;
+  }
+  .card h2, .about-me-card h2, .social-card h2, .skills-card h2, .img-card h2, .small-text-card h2, .project-card h2, .music-card h2, .hardware-card h2 {
+    font-size: 23px;
+  }
+  .skills-card {
+    gap: 11px;
+  }
+  .skills-card h2 {
+    margin-bottom: 0px;
+  }
+  .skills-card .skill-div {
+    margin-left: 30px;
+  }
+  .skills-card .skill-div h5 {
+    font-size: 12px;
+  }
+  .skills-card img {
+    height: 25px;
+    width: 25px;
+    margin-right: 17px;
+  }
+  .small-text-card p {
+    font-size: 13.5px;
+    margin: 0px 20px;
+  }
+  .small-text-card .btn-container-small-card {
+    margin-top: auto;
+    padding-bottom: 15px;
+  }
+  .hardware-card h2 {
+    margin: 0px 0px 16px 0;
+  }
+  .hardware-card .hardware-item {
+    font-size: 20px;
+  }
+  .hardware-card img {
+    max-height: 125px;
+  }
+  .project-card p {
+    font-size: 11.5px;
+  }
+  .project-card .project-card-icons img {
+    height: 20px;
+  }
+  .project-card .project-img-container {
+    height: 210px;
+    width: 152px;
   }
 }
 .dark-mode {
@@ -481,7 +832,7 @@ body {
 .dark-mode .header .nav-btn span {
   background-color: #1c1c1e;
 }
-.dark-mode .card, .dark-mode .about-me-card, .dark-mode .social-card, .dark-mode .skills-card, .dark-mode .project-card, .dark-mode .music-card, .dark-mode .hardware-card {
+.dark-mode .card, .dark-mode .about-me-card, .dark-mode .social-card, .dark-mode .skills-card, .dark-mode .img-card, .dark-mode .small-text-card, .dark-mode .project-card, .dark-mode .music-card, .dark-mode .hardware-card {
   background-color: #2c2c2e;
   box-shadow: none;
 }
@@ -498,11 +849,11 @@ body {
 .dark-mode .about-me-card .btn-container .see-more-btn span {
   background-color: #1c1c1e;
 }
-.dark-mode .card .projects-btn, .dark-mode .about-me-card .projects-btn, .dark-mode .social-card .projects-btn, .dark-mode .skills-card .projects-btn, .dark-mode .project-card .projects-btn, .dark-mode .music-card .projects-btn, .dark-mode .hardware-card .projects-btn {
+.dark-mode .card .projects-btn, .dark-mode .about-me-card .projects-btn, .dark-mode .social-card .projects-btn, .dark-mode .skills-card .projects-btn, .dark-mode .img-card .projects-btn, .dark-mode .small-text-card .projects-btn, .dark-mode .project-card .projects-btn, .dark-mode .music-card .projects-btn, .dark-mode .hardware-card .projects-btn {
   background-color: #1c1c1e;
   color: #fafafa;
 }
-.dark-mode .card .projects-btn span, .dark-mode .about-me-card .projects-btn span, .dark-mode .social-card .projects-btn span, .dark-mode .skills-card .projects-btn span, .dark-mode .project-card .projects-btn span, .dark-mode .music-card .projects-btn span, .dark-mode .hardware-card .projects-btn span {
+.dark-mode .card .projects-btn span, .dark-mode .about-me-card .projects-btn span, .dark-mode .social-card .projects-btn span, .dark-mode .skills-card .projects-btn span, .dark-mode .img-card .projects-btn span, .dark-mode .small-text-card .projects-btn span, .dark-mode .project-card .projects-btn span, .dark-mode .music-card .projects-btn span, .dark-mode .hardware-card .projects-btn span {
   background-color: #1c1c1e;
 }
 .dark-mode .hardware-card .hardware-item {
@@ -536,4 +887,9 @@ body {
 }
 .dark-mode .twitterx img {
   scale: 0.4;
+}
+
+.reduced-opacity {
+  opacity: 15%;
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */
