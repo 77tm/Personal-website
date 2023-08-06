@@ -39,6 +39,24 @@ $subheadingColor: #6e6e6e;
                     padding: 6px 12px;
                 }
             }
+
+            @media (max-width: 545px) { 
+                padding: 10px 4px 10px 4px;
+
+                span {
+                    font-size: 15px;
+                    padding: 6px 12px;
+                }
+            }
+
+            @media (max-width: 359px) {
+                padding: 8px 4px 10px 4px;
+
+                span {
+                    font-size: 13px;
+                    padding: 6px 11px;
+                }
+            }
 }
 
 @mixin gray-btn-dark {
@@ -62,7 +80,7 @@ $subheadingColor: #6e6e6e;
     display: flex;
     justify-content: center;
     gap: 16px;
-    // margin-top: 22px;
+    // margin-top: 50px;
     position: absolute;
     bottom: 25px;
     transform: translateX(-50%);
@@ -71,7 +89,17 @@ $subheadingColor: #6e6e6e;
     @media (max-width: 1199px) {
         bottom: 15px;
     }
+
+    @media (max-width: 545px) { 
+        width: 300px;
+        bottom: 25px;
+    }
+
+    @media (max-width: 359px) {
+        bottom: 14px;
+    }
 }
+
 
 
 * {
@@ -232,7 +260,7 @@ body {
 .main-container {
     display: grid;
     grid-template-columns: repeat(4, 266px);
-    grid-template-rows: repeat(6, 266px);
+    grid-template-rows: repeat(5, 266px);
     gap: 24px;
     margin-bottom: 80px;
     justify-content: center;
@@ -403,31 +431,35 @@ body {
 .skills-card {
     @extend .card;
     grid-row: span 2;
-    gap: 12px;
 
     h2 {
         text-align: left;
         margin-left: 30px;
+        margin-bottom: 20px;
     }
     
-    
-    .skill-div {
+    .skill-container {
         display: flex;
-        
-        align-items: center;
-        margin-left: 30px;
-        
-        h5 {
-            // color: $textColor;
-            letter-spacing: 0.3px;
-            font-weight: 600;
+        flex-direction: column;
+        gap: 13px;
+        .skill-div {
+            display: flex;
+            
+            align-items: center;
+            margin-left: 30px;
+            
+            h5 {
+                // color: $textColor;
+                letter-spacing: 0.3px;
+                font-weight: 600;
+            }
         }
-    }
-    
-    img {
-        height: 30px;
-        width: 30px;
-        margin-right: 20px;
+        
+        img {
+            height: 30px;
+            width: 30px;
+            margin-right: 20px;
+        }
     }
 }
 
@@ -613,7 +645,7 @@ body {
     .main-container {
         max-width: 1000px;
         grid-template-columns: repeat(4, 216px);
-        grid-template-rows: repeat(6, 216px);
+        grid-template-rows: repeat(5, 216px);
     }
 
     .header {    
@@ -676,19 +708,25 @@ body {
         h2 {
             margin-bottom: 0px;
         }
-        
-        .skill-div {
-            margin-left: 30px;
-            
-            h5 {
-                font-size: 12px;
+
+        .skill-container {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+
+            .skill-div {
+                margin-left: 30px;
+                
+                h5 {
+                    font-size: 12px;
+                }
             }
-        }
-        
-        img {
-            height: 25px;
-            width: 25px;
-            margin-right: 17px;
+            
+            img {
+                height: 25px;
+                width: 25px;
+                margin-right: 17px;
+            }
         }
     }
     
@@ -749,7 +787,7 @@ body {
     .main-container {
         max-width: 800px;
         grid-template-columns: repeat(3, 229px);
-        grid-template-rows: repeat(8, 229px);
+        grid-template-rows: repeat(7, 229px);
     }
 
     .about-me-card {
@@ -773,12 +811,26 @@ body {
         gap: 11.5px;
         
         h2 {
-            margin-bottom: 7px;
+            margin-bottom: 5px;
         }
 
-        .skill-div {
-            h5 {
-                font-size: 13px;
+        .skill-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .skill-div {
+                margin-left: 30px;
+                
+                h5 {
+                    font-size: 13px;
+                }
+            }
+            
+            img {
+                height: 25px;
+                width: 25px;
+                margin-right: 17px;
             }
         }
     }
@@ -832,7 +884,7 @@ body {
     .main-container {
         max-width: 482px;
         grid-template-columns: repeat(2, 229px);
-        grid-template-rows: repeat(12, 229px);
+        grid-template-rows: repeat(10, 229px);
     }
 
     .header {    
@@ -918,21 +970,27 @@ body {
         gap: 13px;
         
         h2 {
-            margin-bottom: 0px;
+            margin-bottom: 8px;
         }
         
-        .skill-div {
-            margin-left: 30px;
-            
-            h5 {
-                font-size: 12px;
+        .skill-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .skill-div {
+                margin-left: 30px;
+                
+                h5 {
+                    font-size: 13px;
+                }
             }
-        }
-        
-        img {
-            height: 25px;
-            width: 25px;
-            margin-right: 17px;
+            
+            img {
+                height: 25px;
+                width: 25px;
+                margin-right: 17px;
+            }
         }
     }
     
@@ -984,60 +1042,71 @@ body {
 @media (max-width: 545px) { 
     // seit turpinat
     .page {
-        max-width: 1000px;
+        max-width: 360px;
     }
 
     .header {
-        max-width: 1000px;
+        max-width: 360px;
     }
 
     .main-container {
-        max-width: 1000px;
-        grid-template-columns: repeat(4, 216px);
-        grid-template-rows: repeat(6, 216px);
+        max-width: 360px;
+        grid-template-columns: repeat(2, 168px);
+        grid-template-rows: repeat(19, 168px);
     }
 
     .header {    
+        padding: 0px 5px;
         nav {
             ul {
-                font-size: 14.5px;
+                gap: 0px;
+                font-size: 15px;
+                .filter {
+                    padding: 6px 14px;
+                }
             }
         }
 
         .nav-btn {
-            padding: 10px 4px 11px 4px;
+            padding: 9px 4px 11px 4px;
     
             span {
                 font-size: 14.5px;
-                padding: 7px 16px;
+                padding: 6.5px 13px;
             }
         }
     }
 
     .about-me-card {
+        text-align: left;
+        padding: 32px;
+
         h1 {
-            font-size: 38px;
+            font-size: 42px;
+            margin: 0;
         }
 
         h3 {
-            font-size: 18px;
-            margin-top: 4px;
-            margin-bottom: -6px;
+            font-size: 24px;
+            // margin-top: 4px;
+            margin-bottom: 5px;
         }
 
         p {
-            font-size: 13.5px;
-            width: 48ch;
+            font-size: 15px;
+            width: 30ch;
+            text-align: left;
+            margin-left: 0;
         }
 
         .btn-container {
     
             .work-btn {
-                padding: 7px 4px 6px 4px;
+                padding: 10px 4px 10px 4px;
 
                 span {
-                    font-size: 12.5px;
-                    padding: 6px 12px;
+                    font-size: 15px;
+                    padding: 6px 12px 6px 12px;
                 }
             }
 
@@ -1046,78 +1115,532 @@ body {
     }
 
     .card {
+        grid-column: span 2;
+        grid-row: span 2;
         h2 {
-            font-size: 23px;
+            font-size: 30px;
         }
     }
     
     .skills-card {
-        gap: 11px;
-        
+        gap: 18px;
+        padding: 32px;
+
         h2 {
-            margin-bottom: 0px;
+            margin: 0;
         }
         
-        .skill-div {
-            margin-left: 30px;
-            
-            h5 {
-                font-size: 12px;
+        .skill-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Create two columns */
+            gap: 14px;
+            margin: 0;
+
+            .skill-div {
+                display: flex;
+                align-items: center;
+                margin-left: 0px;
+                width: 160px;
+                flex-basis: 50%; /* Set the width to 50% to fit two items per row */
+            }
+        
+            img {
+                height: 30px;
+                width: 30px;
+                margin-right: 20px;
             }
         }
-        
-        img {
-            height: 25px;
-            width: 25px;
-            margin-right: 17px;
-        }
+    
     }
     
+    
     .small-text-card {
+        padding: 32px;
+
+        h2 {
+            margin: 0;
+        }
+
         p{
-            font-size: 13.5px;
-            margin: 0px 20px;
+            font-size: 18px;
+            margin-top: 40px;
+            font-weight: 500;
+            width: 20ch;
+            align-self: center
         }
         
         .btn-container-small-card {
             margin-top: auto;
-            padding-bottom: 15px;
+            padding-bottom: 8px;
         }
     }
 
     .hardware-card {
+        grid-column: span 2;
+        padding: 32px;
+    
         h2 {
-            margin: 0px 0px 16px 0;
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0px 0px 8px 0;
+            text-align: center;
         }
     
         .hardware-item {
-            font-size: 20px;
+            cursor: pointer;
+            font-size: 22px;
+            margin-left: 0;
+            line-height: 1.2em;
+            margin-right: 0;
+        }
+    
+        .hardware-grid {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .hardware-grid-left {
+            // flex: 1;
+            order: 2;
+            align-items: center;
+        }
+    
+        .hardware-grid-right {
+            // flex: 1;
+            order: 1;
+            display: flex;
+            justify-content: center;
         }
     
         img {
-            max-height: 125px;
+            max-height: 150px;
+            margin-bottom: 10px;
         }
+    
     }
+    
 
     .project-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         p {
-            font-size: 11.5px;
+            font-size: 12px;
         }
-
+    
+        h2 {
+            margin-bottom: 8px;
+        }
+    
         .project-card-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 7px;
+    
             img {
-                height: 20px;
+                height: 22px;
             }
         }
     
         .project-img-container {
-            height: 210px;
-            width: 152px;
+            display: flex;
+            height: 270px;
+            width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+            justify-content: center;
+            align-items: center;
+    
+            img {
+                max-width: 100%;
+                // max-height: 100%;
+                margin-left: 0px;
+                border-radius: 10px;
+            }
         }
+    
+        .project-btn {
+            display: flex;
+            justify-content: center;
+            height: auto;
+            margin-top: auto;
+        }
+    
+    }
+
+    .social-card {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .github {
+        grid-column: span 2;
     }
 }
 
+@media (max-width: 423px) { 
+
+    .main-container {
+        max-width: 360px;
+        grid-template-columns: repeat(2, 161px);
+        grid-template-rows: repeat(19, 161px);
+    }
+
+    .header {    
+        padding: 0px 5px;
+        nav {
+            ul {
+                gap: 0px;
+                font-size: 15px;
+                .filter {
+                    padding: 6px 14px;
+                }
+            }
+        }
+
+        .nav-btn {
+            padding: 9px 4px 11px 4px;
+    
+            span {
+                font-size: 14.5px;
+                padding: 6.5px 13px;
+            }
+        }
+    }
+
+    .about-me-card {
+        h1 {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+    
+    .skills-card {
+        gap: 16px;
+
+        .skill-container {        
+            img {
+                height: 28px;
+                width: 28px;
+            }
+        }
+    
+    }
+}
+
+@media (max-width: 409px) { 
+    .page {
+        max-width: 288px;
+    }
+
+    .header {
+        max-width: 288px;
+    }
+
+    .main-container {
+        max-width: 288px;
+        grid-template-columns: repeat(2, 151px);
+        grid-template-rows: repeat(19, 151px);
+    }
+
+    .header {    
+        padding: 0px;
+        nav {
+            ul {
+                gap: 0px;
+                font-size: 14px;
+                .filter {
+                    padding: 6px 10px;
+                }
+            }
+        }
+
+        .nav-btn {
+            padding: 9px 4px 11px 4px;
+    
+            span {
+                font-size: 14.5px;
+                padding: 6.5px 13px;
+            }
+        }
+    }
+
+    .about-me-card {
+        padding: 24px;
+        h1 {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    }
+
+    .card {
+        h2 {
+            font-size: 28px;
+        }
+    }
+    
+    .skills-card {
+        padding: 24px;
+        gap: 16px;
+
+        .skill-container {        
+            img {
+                height: 28px;
+                width: 28px;
+            }
+        }
+    
+    }
+
+    .small-text-card {
+        padding: 24px;
+        p{
+            margin-top: 30px;
+        }
+    }
+
+    .hardware-card {
+        padding: 24px;
+
+        img {
+            margin-bottom: 0;
+        }
+    }
+
+    .project-card {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 373px) { 
+    .page {
+        max-width: 288px;
+    }
+
+    .header {
+        max-width: 288px;
+    }
+
+    .main-container {
+        max-width: 288px;
+        grid-template-columns: repeat(2, 144px);
+        grid-template-rows: repeat(19, 144px);
+    }
+
+    .header {    
+        padding: 0px;
+        nav {
+            ul {
+                gap: 0px;
+                font-size: 14px;
+                .filter {
+                    padding: 6px 10px;
+                }
+            }
+        }
+
+        .nav-btn {
+            padding: 9px 4px 11px 4px;
+    
+            span {
+                font-size: 14.5px;
+                padding: 6.5px 13px;
+            }
+        }
+    }
+
+    .about-me-card {
+        padding: 24px;
+        h1 {
+            font-size: 38px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+
+    .card {
+        h2 {
+            font-size: 28px;
+        }
+    }
+    
+    .skills-card {
+        padding: 24px;
+        gap: 14px;
+
+        .skill-container {      
+            gap: 13px;
+            h5 {
+                font-size: 12px;
+            }
+
+            img {
+                height: 26px;
+                width: 26px;
+            }
+        }
+    }
+
+    .small-text-card {
+        padding: 24px;
+        p {
+            margin-top: 20px;
+        }
+    }
+
+    .hardware-card {
+        padding: 24px;
+
+        img {
+            max-height: 120px;
+        }
+    }
+
+    .project-card {
+        padding: 24px;
+    }
+
+}
+
+@media (max-width: 359px) { 
+    .page {
+        max-width: 272px;
+    }
+
+    .header {
+        max-width: 272px;
+    }
+
+    .main-container {
+        max-width: 272px;
+        grid-template-columns: repeat(2, 128px);
+        grid-template-rows: repeat(19, 128px);
+        gap: 12px;
+    }
+
+    .header {    
+        padding: 0px;
+        nav {
+            ul {
+                gap: 0px;
+                font-size: 13px;
+                .filter {
+                    padding: 6px 10px;
+                }
+            }
+        }
+
+        .nav-btn {
+            padding: 9px 4px 11px 4px;
+    
+            span {
+                font-size: 14.5px;
+                padding: 6.5px 13px;
+            }
+        }
+    }
+
+    .about-me-card {
+        padding: 16px;
+        h1 {
+            font-size: 34px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 12.5px;
+            margin-top: 5px;
+        }
+
+        .btn-container {
+            .work-btn {
+                padding: 8px 4px 10px 4px;
+                span {
+                    font-size: 13px;
+                    padding: 6px 14px;
+                }
+            }    
+        }
+    }
+
+    .card {
+        h2 {
+            font-size: 24px;
+        }
+    }
+    
+    .skills-card {
+        padding: 16px;
+        gap: 10px;
+
+        .skill-container {      
+            gap: 13px;
+
+            .skill-div {
+                width: 140px;
+                
+                h5 {
+                    font-size: 12px;
+                }
+                
+                img {
+                    height: 22px;
+                    width: 22px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .small-text-card {
+        padding: 16px;
+        p {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    }
+
+    .hardware-card {
+        padding: 16px;
+
+        img {
+            max-height: 110px;
+            margin-bottom: 5px;
+        }
+    }
+
+    .project-card {
+        padding: 16px;
+    }
+
+}
 
 
 

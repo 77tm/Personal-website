@@ -1,8 +1,6 @@
 import React from "react";
 import skillsData from "../skillsData";
 
-
-
 export default function SkillsCard(props) {
     const skills = skillsData.map(elem => {
         return (
@@ -16,7 +14,9 @@ export default function SkillsCard(props) {
     return (
         <div className={props.className}>
             <h2>My Toolbox</h2>
-            {skills}
+            <div className="skill-container">
+                {skills}
+            </div>
         </div>
     )
 }

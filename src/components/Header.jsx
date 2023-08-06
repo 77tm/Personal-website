@@ -8,12 +8,6 @@ export default function Header({activeItem, setActiveItem, darkMode, setDarkMode
         setDarkMode(prevMode => !prevMode);
     }
 
-    // const [activeItem, setActiveItem] = React.useState('item1');
-
-    // const handleItemClick = (itemId) => {
-    //     setActiveItem(itemId);
-    // };
-
     return (
         <>
             <header className="header">
