@@ -14,7 +14,7 @@ export default function Header({activeItem, setActiveItem, darkMode, setDarkMode
                 <div className="toggle-container" onClick={switchMode}>
                     <div className={darkMode ? "switch dark" : "switch light"}>
                         <div className="toggle">    
-                            <img src={darkMode ? moon : sun}></img>
+                            <img src={darkMode ? moon : sun} loading="lazy" />
                         </div>
                     </div>
                 </div>

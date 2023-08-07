@@ -170,7 +170,7 @@ body {
   font-weight: 500;
 }
 .about-me-card p {
-  margin-top: 18px;
+  margin: 18px auto 0px auto;
   font-size: 16px;
   line-height: 1.4;
   font-weight: 400;
@@ -249,7 +249,7 @@ body {
 }
 @media (max-width: 545px) {
   .about-me-card .btn-container .see-more-btn {
-    padding: 10px 4px 10px 4px;
+    padding: 9.5px 4px 10px 4px;
   }
   .about-me-card .btn-container .see-more-btn span {
     font-size: 15px;
@@ -346,6 +346,8 @@ body {
 }
 
 .img-card img {
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 32px;
   opacity: 95%;
 }
@@ -380,7 +382,7 @@ body {
 }
 @media (max-width: 545px) {
   .card .projects-btn, .hardware-card .projects-btn, .music-card .projects-btn, .project-card .projects-btn, .small-text-card .projects-btn, .about-me-card .projects-btn, .social-card .projects-btn, .skills-card .projects-btn, .img-card .projects-btn {
-    padding: 10px 4px 10px 4px;
+    padding: 9.5px 4px 10px 4px;
   }
   .card .projects-btn span, .hardware-card .projects-btn span, .music-card .projects-btn span, .project-card .projects-btn span, .small-text-card .projects-btn span, .about-me-card .projects-btn span, .social-card .projects-btn span, .skills-card .projects-btn span, .img-card .projects-btn span {
     font-size: 15px;
@@ -862,7 +864,7 @@ body {
   }
   .skills-card .skill-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Create two columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: 14px;
     margin: 0;
   }
@@ -871,7 +873,7 @@ body {
     align-items: center;
     margin-left: 0px;
     width: 160px;
-    flex-basis: 50%; /* Set the width to 50% to fit two items per row */
+    flex-basis: 50%;
   }
   .skills-card .skill-container img {
     height: 30px;
@@ -1019,13 +1021,13 @@ body {
 }
 @media (max-width: 409px) {
   .page {
-    max-width: 288px;
+    max-width: 330px;
   }
   .header {
-    max-width: 288px;
+    max-width: 330px;
   }
   .main-container {
-    max-width: 288px;
+    max-width: 330px;
     grid-template-columns: repeat(2, 151px);
     grid-template-rows: repeat(19, 151px);
   }
@@ -1037,7 +1039,7 @@ body {
     font-size: 14px;
   }
   .header nav ul .filter {
-    padding: 6px 10px;
+    padding: 6px 13px;
   }
   .header .nav-btn {
     padding: 9px 4px 11px 4px;
@@ -1074,7 +1076,7 @@ body {
     padding: 24px;
   }
   .small-text-card p {
-    margin-top: 30px;
+    margin-top: 25px;
   }
   .hardware-card {
     padding: 24px;

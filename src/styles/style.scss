@@ -41,7 +41,7 @@ $subheadingColor: #6e6e6e;
             }
 
             @media (max-width: 545px) { 
-                padding: 10px 4px 10px 4px;
+                padding: 9.5px 4px 10px 4px;
 
                 span {
                     font-size: 15px;
@@ -125,8 +125,6 @@ body {
     align-items: center;
     margin: 32px 0 32px 0;
     padding: 0 32px 0 32px;
-    // border: 1px solid black;
-
 
     .toggle-container {
         background-color:   white;
@@ -162,14 +160,6 @@ body {
                     border-radius: 50%;
 
                 }
-
-                // .sun-icon {
-                // }
-
-                // .moon-icon {
-                    // right: 4px;
-                // }
-
             }
         }
 
@@ -243,9 +233,6 @@ body {
         }
     }
 
-    // .nav-btn:hover{
-    //     transform: scale(1.05);
-    // }
 }
 
 .banner {
@@ -298,8 +285,6 @@ body {
     }
 }
 
-
-
 .about-me-card {
     @extend .card;
     grid-column: span 2;
@@ -325,7 +310,7 @@ body {
     }
 
     p {
-        margin-top: 18px;
+        margin: 18px auto 0px auto;
         font-size: 16px;
         line-height: 1.4;
         font-weight: 400;
@@ -466,6 +451,8 @@ body {
 .img-card {
     @extend .card;
     img {
+        max-width: 100%;
+        max-height: 100%;
         border-radius: 32px;
         opacity: 95%;
     }
@@ -1132,7 +1119,7 @@ body {
         
         .skill-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Create two columns */
+            grid-template-columns: repeat(2, 1fr);
             gap: 14px;
             margin: 0;
 
@@ -1141,7 +1128,7 @@ body {
                 align-items: center;
                 margin-left: 0px;
                 width: 160px;
-                flex-basis: 50%; /* Set the width to 50% to fit two items per row */
+                flex-basis: 50%;
             }
         
             img {
@@ -1339,15 +1326,15 @@ body {
 
 @media (max-width: 409px) { 
     .page {
-        max-width: 288px;
+        max-width: 330px;
     }
 
     .header {
-        max-width: 288px;
+        max-width: 330px;
     }
 
     .main-container {
-        max-width: 288px;
+        max-width: 330px;
         grid-template-columns: repeat(2, 151px);
         grid-template-rows: repeat(19, 151px);
     }
@@ -1358,8 +1345,9 @@ body {
             ul {
                 gap: 0px;
                 font-size: 14px;
+
                 .filter {
-                    padding: 6px 10px;
+                    padding: 6px 13px;
                 }
             }
         }
@@ -1412,7 +1400,7 @@ body {
     .small-text-card {
         padding: 24px;
         p{
-            margin-top: 30px;
+            margin-top: 25px;
         }
     }
 

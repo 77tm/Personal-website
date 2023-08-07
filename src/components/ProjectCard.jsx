@@ -13,11 +13,11 @@ export default function ProjectCard(props) {
             <p>BUILT WITH</p>
             <div className="project-card-icons">
                 {filteredSkills.map(elem => {
-                   return <img key={elem.name} src={elem.icon} alt={`${elem.name} icon`}></img>
+                   return <img key={elem.name} src={elem.icon} alt={`${elem.name} icon`} loading="lazy" />
                 })}
             </div>
             <div className="project-img-container">
-                <img src={props.projectImg} alt="project-image"></img>
+                <img src={props.projectImg} alt="project-image" />
             </div>
             <div className="project-btn">
                 <a className="projects-btn" href="#">

@@ -4,7 +4,7 @@ export default function SocialCard(props) {
     return (
         
             <a className={props.className} target="_blank" href={props.link}>
-                <img src={props.icon}></img>
+                <img src={props.icon} loading="lazy" />
             </a>
     )
 }

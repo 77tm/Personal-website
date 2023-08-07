@@ -37,7 +37,7 @@ export default function HardwareCard(props) {
                     ))}
                 </div>
                 <div className="hardware-grid-right">
-                    <img src={selectedProduct.image} alt={selectedProduct.name} />
+                    <img src={selectedProduct.image} alt={selectedProduct.name} loading="lazy" />
                 </div>
             </div>
         </div>

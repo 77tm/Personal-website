@@ -4,7 +4,7 @@ import myPhoto from "/public/me.jpg"
 export default function ImageCard(props) {
     return (
         <div className={props.className}>
-            <img src={myPhoto}></img>
+            <img src={myPhoto} loading="lazy" />
         </div>
     )
 }

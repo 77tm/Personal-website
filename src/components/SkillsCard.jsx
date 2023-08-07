@@ -5,7 +5,7 @@ export default function SkillsCard(props) {
     const skills = skillsData.map(elem => {
         return (
             <div key={elem.name} className="skill-div">
-                <img src={elem.icon} alt={`${elem.name} logo`}></img>
+                <img src={elem.icon} alt={`${elem.name} logo`} loading="lazy" />
                 <h5>{elem.name}</h5>
             </div>
         )
