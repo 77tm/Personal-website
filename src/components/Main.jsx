@@ -35,9 +35,9 @@ export default function Main({activeItem, setActiveItem}) {
                 <SkillsCard className="skills-card"/>
                 <SmallTextCard setActiveItem={setActiveItem} className='small-text-card' title="Since 2021" text="Since embarking on my coding journey in 2021, I have found my true passion to be the captivating realm of web development." />
                 <HardwareCard className="hardware-card"/>
-                <ProjectCard className="project-card" projectName="Portfolio" projectImg={portfolioWebsite} skillsArray={portfolioSkills}/>
-                <ProjectCard className="project-card" projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills}/>
-                <ProjectCard className="project-card" projectName="Ferrari page" projectImg={ferrariWebsite} skillsArray={ferrariSKills}/>
+                <ProjectCard className="project-card" projectName="Portfolio" projectImg={portfolioWebsite} skillsArray={portfolioSkills} projectLink="/portfolio" />
+                <ProjectCard className="project-card" projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills} projectLink="/bookslv" />
+                <ProjectCard className="project-card" projectName="Ferrari page" projectImg={ferrariWebsite} skillsArray={ferrariSKills} projectLink="/ferrari" />
                 <SocialCard className='social-card instagram' icon={instagram} link="https://www.instagram.com/madzuls/"/>
                 <SocialCard className='social-card facebook' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>
                 <SocialCard className='social-card github' icon={github} link="https://github.com/77tm"/>
@@ -60,9 +60,9 @@ export default function Main({activeItem, setActiveItem}) {
 
                 {/* reduced opacity */}
                 <HardwareCard className="hardware-card reduced-opacity"/>
-                <ProjectCard className="project-card reduced-opacity" projectName="Portfolio" projectImg={portfolioWebsite} skillsArray={portfolioSkills}/>
-                <ProjectCard className="project-card reduced-opacity" projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills}/>
-                <ProjectCard className="project-card reduced-opacity" projectName="Ferrari page" projectImg={ferrariWebsite} skillsArray={ferrariSKills}/>
+                <ProjectCard className="project-card reduced-opacity" projectName="Portfolio" projectImg={portfolioWebsite} skillsArray={portfolioSkills} projectLink="/portfolio" />
+                <ProjectCard className="project-card reduced-opacity" projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills} projectLink="/bookslv" />
+                <ProjectCard className="project-card reduced-opacity" projectName="Ferrari page" projectImg={ferrariWebsite} skillsArray={ferrariSKills} projectLink="/ferrari" />
             </>
             )}
 
@@ -71,9 +71,9 @@ export default function Main({activeItem, setActiveItem}) {
                 <AboutMeCard className="about-me-card" setActiveItem={setActiveItem} />
                 <SocialCard className='social-card github' icon={github} link="https://github.com/77tm"/>
                 <SkillsCard className="skills-card"/>
-                <ProjectCard className="project-card" projectName="Portfolio" projectImg={portfolioWebsite} skillsArray={portfolioSkills}/>
-                <ProjectCard className="project-card" projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills}/>
-                <ProjectCard className="project-card" projectName="Ferrari page" projectImg={ferrariWebsite} skillsArray={ferrariSKills}/>
+                <ProjectCard className="project-card" projectName="Portfolio" projectImg={portfolioWebsite} skillsArray={portfolioSkills} projectLink="/portfolio" />
+                <ProjectCard className="project-card" projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills} projectLink="/bookslv" />
+                <ProjectCard className="project-card" projectName="Ferrari page" projectImg={ferrariWebsite} skillsArray={ferrariSKills} projectLink="/ferrari" />
 
                 {/* reduced opacity */}
                 <HardwareCard className="hardware-card reduced-opacity"/>
@@ -99,9 +99,9 @@ export default function Main({activeItem, setActiveItem}) {
                 <ImageCard className="img-card reduced-opacity" />
                 <SkillsCard className="skills-card reduced-opacity"/>
                 <HardwareCard className="hardware-card reduced-opacity"/>
-                <ProjectCard className="project-card reduced-opacity" projectName="Portfolio" projectImg={portfolioWebsite} skillsArray={portfolioSkills}/>
-                <ProjectCard className="project-card reduced-opacity" projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills}/>
-                <ProjectCard className="project-card reduced-opacity" projectName="Ferrari page" projectImg={ferrariWebsite} skillsArray={ferrariSKills}/>
+                <ProjectCard className="project-card reduced-opacity" projectName="Portfolio" projectImg={portfolioWebsite} skillsArray={portfolioSkills} projectLink="/portfolio" />
+                <ProjectCard className="project-card reduced-opacity" projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills} projectLink="/bookslv" />
+                <ProjectCard className="project-card reduced-opacity" projectName="Ferrari page" projectImg={ferrariWebsite} skillsArray={ferrariSKills} projectLink="/ferrari" />
                 <SmallTextCard setActiveItem={setActiveItem} className='small-text-card reduced-opacity' title="Since 2021" text="Since embarking on my coding journey in 2021, I have found my true passion to be the captivating realm of web development." />
 
             </>
@@ -117,9 +117,9 @@ export default function Main({activeItem, setActiveItem}) {
 
                 {/* reduced opacity */}
                 <AboutMeCard className="about-me-card reduced-opacity" setActiveItem={setActiveItem} />
-                <ProjectCard className="project-card reduced-opacity" projectName="Portfolio" projectImg={portfolioWebsite} skillsArray={portfolioSkills}/>
-                <ProjectCard className="project-card reduced-opacity" projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills}/>
-                <ProjectCard className="project-card reduced-opacity" projectName="Ferrari page" projectImg={ferrariWebsite} skillsArray={ferrariSKills}/>
+                <ProjectCard className="project-card reduced-opacity" projectName="Portfolio" projectImg={portfolioWebsite} skillsArray={portfolioSkills} projectLink="/portfolio" />
+                <ProjectCard className="project-card reduced-opacity" projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills} projectLink="/bookslv" />
+                <ProjectCard className="project-card reduced-opacity" projectName="Ferrari page" projectImg={ferrariWebsite} skillsArray={ferrariSKills} projectLink="/ferrari" />
                 <ImageCard className="img-card reduced-opacity" />
                 <SocialCard className='social-card instagram reduced-opacity' icon={instagram} link="https://www.instagram.com/madzuls/"/>
                 <SocialCard className='social-card facebook reduced-opacity' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>

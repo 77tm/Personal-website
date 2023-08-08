@@ -1,5 +1,6 @@
 import React from "react";
 import skillsData from "../skillsData";
+import { Link } from "react-router-dom";
 
 
 export default function ProjectCard(props) {
@@ -20,9 +21,9 @@ export default function ProjectCard(props) {
                 <img src={props.projectImg} alt="project-image" />
             </div>
             <div className="project-btn">
-                <a className="projects-btn" href="#">
+                <Link className="projects-btn" to={props.projectLink}>
                     <span>View project</span>
-                </a>
+                </Link>
             </div>
         </div>
     )

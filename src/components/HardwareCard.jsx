@@ -29,8 +29,6 @@ export default function HardwareCard(props) {
                             className={`hardware-item ${selectedProduct.id === product.id ? "active" : ""}`}
                             key={product.id}
                             onClick={()=>handleProductClick(product)}
-                            // style={{color: selectedProduct.id === product.id ? "black" : "#6e6e6e73"}}
-                            // className={selectedProduct.id === product.id ? ""}
                         >
                             {product.name}
                         </p>
