@@ -442,6 +442,7 @@ body {
 }
 .project-card .project-card-icons img {
   height: 25px;
+  width: 25px;
 }
 .project-card .project-img-container {
   display: flex;
@@ -509,6 +510,7 @@ body {
 }
 .hardware-card img {
   max-height: 150px;
+  max-width: 200px;
 }
 
 .page {
@@ -671,6 +673,45 @@ body {
     height: 210px;
     width: 152px;
   }
+  .project-page {
+    max-width: 1000px;
+  }
+  .project-page .heading {
+    max-width: 800px;
+    padding: 0 32px;
+    margin: 120px auto 0px auto;
+  }
+  .project-page .heading h1 {
+    font-size: 54px;
+  }
+  .project-page .heading h2 {
+    font-size: 24px;
+  }
+  .project-page .project-img {
+    max-width: 900px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  .project-page .built-with {
+    margin-top: 80px;
+  }
+  .project-page .built-with h3 {
+    font-size: 27px;
+  }
+  .project-page .built-with .project-card-icons {
+    padding: 20px;
+    gap: 10px;
+  }
+  .project-page .built-with .project-card-icons .skill-img {
+    width: 45px;
+    height: 45px;
+  }
+  .project-page p {
+    font-size: 15px;
+    line-height: 1.4;
+    max-width: 62ch;
+  }
 }
 @media (max-width: 999px) {
   .page {
@@ -737,6 +778,40 @@ body {
   .project-card .project-img-container {
     height: 210px;
     width: 170px;
+  }
+  .project-page {
+    max-width: 800px;
+  }
+  .project-page .heading h1 {
+    font-size: 50px;
+  }
+  .project-page .heading h2 {
+    font-size: 22px;
+  }
+  .project-page .project-img {
+    max-width: 700px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  .project-page .built-with {
+    margin-top: 80px;
+  }
+  .project-page .built-with h3 {
+    font-size: 26px;
+  }
+  .project-page .built-with .project-card-icons {
+    padding: 20px;
+    gap: 10px;
+  }
+  .project-page .built-with .project-card-icons .skill-img {
+    width: 40px;
+    height: 40px;
+  }
+  .project-page p {
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 62ch;
   }
 }
 @media (max-width: 799px) {
@@ -854,6 +929,43 @@ body {
   .project-card .project-img-container {
     height: 210px;
     width: 172px;
+  }
+  .project-page {
+    max-width: 500px;
+  }
+  .project-page .heading {
+    margin: 80px auto 0px auto;
+  }
+  .project-page .heading h1 {
+    font-size: 50px;
+  }
+  .project-page .heading h2 {
+    font-size: 18px;
+  }
+  .project-page .project-img {
+    max-width: 400px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  .project-page .built-with {
+    margin-top: 80px;
+  }
+  .project-page .built-with h3 {
+    font-size: 26px;
+  }
+  .project-page .built-with .project-card-icons {
+    padding: 20px;
+    gap: 10px;
+  }
+  .project-page .built-with .project-card-icons .skill-img {
+    width: 40px;
+    height: 40px;
+  }
+  .project-page p {
+    font-size: 15px;
+    line-height: 1.4;
+    max-width: 62ch;
   }
 }
 @media (max-width: 545px) {
@@ -1040,6 +1152,48 @@ body {
   .github {
     grid-column: span 2;
   }
+  .project-page {
+    max-width: 360px;
+    padding: 0;
+  }
+  .project-page .heading {
+    padding: 0;
+    margin: 20px auto 0px auto;
+  }
+  .project-page .heading h1 {
+    font-size: 42px;
+  }
+  .project-page .heading h2 {
+    font-size: 14px;
+  }
+  .project-page .project-img {
+    max-width: 360px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  .project-page .built-with {
+    margin-top: 80px;
+  }
+  .project-page .built-with h3 {
+    font-size: 24px;
+  }
+  .project-page .built-with .project-card-icons {
+    padding: 20px;
+    gap: 10px;
+  }
+  .project-page .built-with .project-card-icons .skill-img {
+    width: 35px;
+    height: 35px;
+  }
+  .project-page p {
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 62ch;
+    margin: 30px 10px;
+    text-align: left;
+  }
 }
 @media (max-width: 423px) {
   .main-container {
@@ -1149,6 +1303,48 @@ body {
   .project-card {
     padding: 24px;
   }
+  .project-page {
+    max-width: 330px;
+    padding: 0;
+  }
+  .project-page .heading {
+    padding: 0;
+    margin: 20px auto 0px auto;
+  }
+  .project-page .heading h1 {
+    font-size: 38px;
+  }
+  .project-page .heading h2 {
+    font-size: 14px;
+  }
+  .project-page .project-img {
+    max-width: 330px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  .project-page .built-with {
+    margin-top: 80px;
+  }
+  .project-page .built-with h3 {
+    font-size: 24px;
+  }
+  .project-page .built-with .project-card-icons {
+    padding: 20px;
+    gap: 10px;
+  }
+  .project-page .built-with .project-card-icons .skill-img {
+    width: 35px;
+    height: 35px;
+  }
+  .project-page p {
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 62ch;
+    margin: 30px 10px;
+    text-align: left;
+  }
 }
 @media (max-width: 373px) {
   .page {
@@ -1223,6 +1419,48 @@ body {
   }
   .project-card {
     padding: 24px;
+  }
+  .project-page {
+    max-width: 288px;
+    padding: 0;
+  }
+  .project-page .heading {
+    padding: 0;
+    margin: 20px auto 0px auto;
+  }
+  .project-page .heading h1 {
+    font-size: 38px;
+  }
+  .project-page .heading h2 {
+    font-size: 14px;
+  }
+  .project-page .project-img {
+    max-width: 288px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  .project-page .built-with {
+    margin-top: 80px;
+  }
+  .project-page .built-with h3 {
+    font-size: 22px;
+  }
+  .project-page .built-with .project-card-icons {
+    padding: 20px;
+    gap: 10px;
+  }
+  .project-page .built-with .project-card-icons .skill-img {
+    width: 30px;
+    height: 30px;
+  }
+  .project-page p {
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 62ch;
+    margin: 30px 10px;
+    text-align: left;
   }
 }
 @media (max-width: 359px) {
@@ -1312,6 +1550,48 @@ body {
   }
   .project-card {
     padding: 16px;
+  }
+  .project-page {
+    max-width: 272px;
+    padding: 0;
+  }
+  .project-page .heading {
+    padding: 0;
+    margin: 20px auto 0px auto;
+  }
+  .project-page .heading h1 {
+    font-size: 38px;
+  }
+  .project-page .heading h2 {
+    font-size: 14px;
+  }
+  .project-page .project-img {
+    max-width: 272px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  .project-page .built-with {
+    margin-top: 80px;
+  }
+  .project-page .built-with h3 {
+    font-size: 22px;
+  }
+  .project-page .built-with .project-card-icons {
+    padding: 20px;
+    gap: 10px;
+  }
+  .project-page .built-with .project-card-icons .skill-img {
+    width: 30px;
+    height: 30px;
+  }
+  .project-page p {
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 62ch;
+    margin: 30px 10px;
+    text-align: left;
   }
 }
 .dark-mode {

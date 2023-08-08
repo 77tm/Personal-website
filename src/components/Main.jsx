@@ -38,11 +38,11 @@ export default function Main({activeItem, setActiveItem}) {
                 <ProjectCard className="project-card" projectName="Portfolio" projectImg={portfolioWebsite} skillsArray={portfolioSkills} projectLink="/portfolio" />
                 <ProjectCard className="project-card" projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills} projectLink="/bookslv" />
                 <ProjectCard className="project-card" projectName="Ferrari page" projectImg={ferrariWebsite} skillsArray={ferrariSKills} projectLink="/ferrari" />
-                <SocialCard className='social-card instagram' icon={instagram} link="https://www.instagram.com/madzuls/"/>
-                <SocialCard className='social-card facebook' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>
-                <SocialCard className='social-card github' icon={github} link="https://github.com/77tm"/>
-                <SocialCard className='social-card linkedin' icon={linkedin} link="https://www.linkedin.com/in/toms-mad%C5%BEuls-ba5a56239/"/>
-                <SocialCard className='social-card twitterx' icon={twitterx} link="https://twitter.com/tmadzuls"/>
+                <SocialCard name="instagram" className='social-card instagram' icon={instagram} link="https://www.instagram.com/madzuls/"/>
+                <SocialCard name="facebook" className='social-card facebook' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>
+                <SocialCard name="github" className='social-card github' icon={github} link="https://github.com/77tm"/>
+                <SocialCard name="linkedin" className='social-card linkedin' icon={linkedin} link="https://www.linkedin.com/in/toms-mad%C5%BEuls-ba5a56239/"/>
+                <SocialCard name="twitterx" className='social-card twitterx' icon={twitterx} link="https://twitter.com/tmadzuls"/>
             </>
             )}
 
@@ -52,11 +52,11 @@ export default function Main({activeItem, setActiveItem}) {
                 <ImageCard className="img-card" />
                 <SkillsCard className="skills-card"/>
                 <SmallTextCard setActiveItem={setActiveItem} className='small-text-card' title="Since 2021" text="Since embarking on my coding journey in 2021, I have found my true passion to be the captivating realm of web development." />
-                <SocialCard className='social-card instagram' icon={instagram} link="https://www.instagram.com/madzuls/"/>
-                <SocialCard className='social-card facebook' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>
-                <SocialCard className='social-card github' icon={github} link="https://github.com/77tm"/>
-                <SocialCard className='social-card linkedin' icon={linkedin} link="https://www.linkedin.com/in/toms-mad%C5%BEuls-ba5a56239/"/>
-                <SocialCard className='social-card twitterx' icon={twitterx} link="https://twitter.com/tmadzuls"/>
+                <SocialCard name="instagram" className='social-card instagram' icon={instagram} link="https://www.instagram.com/madzuls/"/>
+                <SocialCard name="facebook" className='social-card facebook' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>
+                <SocialCard name="github" className='social-card github' icon={github} link="https://github.com/77tm"/>
+                <SocialCard name="linkedin" className='social-card linkedin' icon={linkedin} link="https://www.linkedin.com/in/toms-mad%C5%BEuls-ba5a56239/"/>
+                <SocialCard name="twitterx" className='social-card twitterx' icon={twitterx} link="https://twitter.com/tmadzuls"/>
 
                 {/* reduced opacity */}
                 <HardwareCard className="hardware-card reduced-opacity"/>
@@ -69,7 +69,7 @@ export default function Main({activeItem, setActiveItem}) {
             {activeItem === "projects" && (
             <>
                 <AboutMeCard className="about-me-card" setActiveItem={setActiveItem} />
-                <SocialCard className='social-card github' icon={github} link="https://github.com/77tm"/>
+                <SocialCard name="github" className='social-card github' icon={github} link="https://github.com/77tm"/>
                 <SkillsCard className="skills-card"/>
                 <ProjectCard className="project-card" projectName="Portfolio" projectImg={portfolioWebsite} skillsArray={portfolioSkills} projectLink="/portfolio" />
                 <ProjectCard className="project-card" projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills} projectLink="/bookslv" />
@@ -79,21 +79,21 @@ export default function Main({activeItem, setActiveItem}) {
                 <HardwareCard className="hardware-card reduced-opacity"/>
                 <ImageCard className="img-card reduced-opacity" />
                 <SmallTextCard setActiveItem={setActiveItem} className='small-text-card reduced-opacity' title="Since 2021" text="Since embarking on my coding journey in 2021, I have found my true passion to be the captivating realm of web development." />
-                <SocialCard className='social-card instagram reduced-opacity' icon={instagram} link="https://www.instagram.com/madzuls/"/>
-                <SocialCard className='social-card facebook reduced-opacity' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>
-                <SocialCard className='social-card linkedin reduced-opacity' icon={linkedin} link="https://www.linkedin.com/in/toms-mad%C5%BEuls-ba5a56239/"/>
-                <SocialCard className='social-card twitterx reduced-opacity' icon={twitterx} link="https://twitter.com/tmadzuls"/>
+                <SocialCard name="instagram" className='social-card instagram reduced-opacity' icon={instagram} link="https://www.instagram.com/madzuls/"/>
+                <SocialCard name="facebook" className='social-card facebook reduced-opacity' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>
+                <SocialCard name="linkedin" className='social-card linkedin reduced-opacity' icon={linkedin} link="https://www.linkedin.com/in/toms-mad%C5%BEuls-ba5a56239/"/>
+                <SocialCard name="twitterx" className='social-card twitterx reduced-opacity' icon={twitterx} link="https://twitter.com/tmadzuls"/>
             </>
             )}
 
             {activeItem === "media" && (
             <>
                 <AboutMeCard className="about-me-card" setActiveItem={setActiveItem} />
-                <SocialCard className='social-card instagram' icon={instagram} link="https://www.instagram.com/madzuls/"/>
-                <SocialCard className='social-card facebook' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>
-                <SocialCard className='social-card github' icon={github} link="https://github.com/77tm"/>
-                <SocialCard className='social-card linkedin' icon={linkedin} link="https://www.linkedin.com/in/toms-mad%C5%BEuls-ba5a56239/"/>
-                <SocialCard className='social-card twitterx' icon={twitterx} link="https://twitter.com/tmadzuls"/>
+                <SocialCard name="instagram" className='social-card instagram' icon={instagram} link="https://www.instagram.com/madzuls/"/>
+                <SocialCard name="facebook" className='social-card facebook' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>
+                <SocialCard name="github" className='social-card github' icon={github} link="https://github.com/77tm"/>
+                <SocialCard name="linkedin" className='social-card linkedin' icon={linkedin} link="https://www.linkedin.com/in/toms-mad%C5%BEuls-ba5a56239/"/>
+                <SocialCard name="twitterx" className='social-card twitterx' icon={twitterx} link="https://twitter.com/tmadzuls"/>
                 
                 {/* reduced opacity */}
                 <ImageCard className="img-card reduced-opacity" />
@@ -112,8 +112,8 @@ export default function Main({activeItem, setActiveItem}) {
                 <SkillsCard className="skills-card"/>
                 <HardwareCard className="hardware-card"/>
                 <SmallTextCard setActiveItem={setActiveItem} className='small-text-card' title="Since 2021" text="Since embarking on my coding journey in 2021, I have found my true passion to be the captivating realm of web development." />
-                <SocialCard className='social-card github' icon={github} link="https://github.com/77tm"/>
-                <SocialCard className='social-card twitterx' icon={twitterx} link="https://twitter.com/tmadzuls"/>
+                <SocialCard name="github" className='social-card github' icon={github} link="https://github.com/77tm"/>
+                <SocialCard name="twitterx" className='social-card twitterx' icon={twitterx} link="https://twitter.com/tmadzuls"/>
 
                 {/* reduced opacity */}
                 <AboutMeCard className="about-me-card reduced-opacity" setActiveItem={setActiveItem} />
@@ -121,9 +121,9 @@ export default function Main({activeItem, setActiveItem}) {
                 <ProjectCard className="project-card reduced-opacity" projectName="Books.lv" projectImg={bookslv} skillsArray={bookslvSkills} projectLink="/bookslv" />
                 <ProjectCard className="project-card reduced-opacity" projectName="Ferrari page" projectImg={ferrariWebsite} skillsArray={ferrariSKills} projectLink="/ferrari" />
                 <ImageCard className="img-card reduced-opacity" />
-                <SocialCard className='social-card instagram reduced-opacity' icon={instagram} link="https://www.instagram.com/madzuls/"/>
-                <SocialCard className='social-card facebook reduced-opacity' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>
-                <SocialCard className='social-card linkedin reduced-opacity' icon={linkedin} link="https://www.linkedin.com/in/toms-mad%C5%BEuls-ba5a56239/"/>
+                <SocialCard name="instagram" className='social-card instagram reduced-opacity' icon={instagram} link="https://www.instagram.com/madzuls/"/>
+                <SocialCard name="facebook" className='social-card facebook reduced-opacity' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>
+                <SocialCard name="linkedin" className='social-card linkedin reduced-opacity' icon={linkedin} link="https://www.linkedin.com/in/toms-mad%C5%BEuls-ba5a56239/"/>
             </>
             )}
         </div>
