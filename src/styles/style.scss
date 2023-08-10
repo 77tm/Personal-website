@@ -310,7 +310,7 @@ body {
     }
 
     p {
-        margin: 18px auto 0px auto;
+        margin: 12px auto 0px auto;
         font-size: 16px;
         line-height: 1.4;
         font-weight: 400;
@@ -367,20 +367,21 @@ body {
     img {
         width: 100%;
         height: 100%;
-        scale: 0.3;
+        transform: scale(0.3);
     }
 
 }
 
 .social-card:hover {
     cursor: pointer;
+    opacity: 0.95;
 
-    img {
-
-        @include button-transition;
-        @include button-transform;
-    }
+    // img {
+    //         transition: transform $transitionDelay ease-in-out;
+    //         transform: scale(0.35);
+    //     }
 }
+
 
 .instagram {
     background: radial-gradient( circle farthest-corner at 35% 90%, #fec564, transparent 50% ), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient( ellipse farthest-corner at 20% -50%, #5258cf, transparent 50% ), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient( ellipse farthest-corner at 60% -20%, #893dc2, transparent 50% ), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient( #6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100% );
@@ -408,7 +409,7 @@ body {
     background-color: #000000;
 
     img {
-        scale: 0.4;
+        transform: scale(0.4);
     }
 }
 
@@ -1283,7 +1284,7 @@ body {
         padding: 32px;
 
         h1 {
-            font-size: 42px;
+            font-size: 40px;
             margin: 0;
         }
 
@@ -1364,7 +1365,7 @@ body {
 
         p{
             font-size: 18px;
-            margin-top: 40px;
+            margin-top: 30px;
             font-weight: 500;
             width: 20ch;
             align-self: center
@@ -1566,7 +1567,7 @@ body {
 
     .about-me-card {
         h1 {
-            font-size: 40px;
+            font-size: 38px;
         }
 
         h3 {
@@ -1634,7 +1635,7 @@ body {
     .about-me-card {
         padding: 24px;
         h1 {
-            font-size: 40px;
+            font-size: 38px;
         }
 
         h3 {
@@ -1669,7 +1670,7 @@ body {
     .small-text-card {
         padding: 24px;
         p{
-            margin-top: 25px;
+            margin-top: 20px;
         }
     }
 
@@ -1779,7 +1780,7 @@ body {
     .about-me-card {
         padding: 24px;
         h1 {
-            font-size: 38px;
+            font-size: 36px;
         }
 
         h3 {
@@ -1930,7 +1931,7 @@ body {
     .about-me-card {
         padding: 16px;
         h1 {
-            font-size: 34px;
+            font-size: 32px;
         }
 
         h3 {
@@ -2168,10 +2169,6 @@ body {
     
     .twitterx {
         background-color: #000000;
-    
-        img {
-            scale: 0.4;
-        }
     }
 }
 

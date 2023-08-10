@@ -170,7 +170,7 @@ body {
   font-weight: 500;
 }
 .about-me-card p {
-  margin: 18px auto 0px auto;
+  margin: 12px auto 0px auto;
   font-size: 16px;
   line-height: 1.4;
   font-weight: 400;
@@ -276,17 +276,12 @@ body {
 .social-card img {
   width: 100%;
   height: 100%;
-  scale: 0.3;
+  transform: scale(0.3);
 }
 
 .social-card:hover {
   cursor: pointer;
-}
-.social-card:hover img {
-  transition: transform 0.4s ease-in-out;
-}
-.social-card:hover img:hover {
-  transform: scale(1.05);
+  opacity: 0.95;
 }
 
 .instagram {
@@ -314,7 +309,7 @@ body {
   background-color: #000000;
 }
 .twitterx img {
-  scale: 0.4;
+  transform: scale(0.4);
 }
 
 .skills-card {
@@ -1002,7 +997,7 @@ body {
     padding: 32px;
   }
   .about-me-card h1 {
-    font-size: 42px;
+    font-size: 40px;
     margin: 0;
   }
   .about-me-card h3 {
@@ -1062,7 +1057,7 @@ body {
   }
   .small-text-card p {
     font-size: 18px;
-    margin-top: 40px;
+    margin-top: 30px;
     font-weight: 500;
     width: 20ch;
     align-self: center;
@@ -1219,7 +1214,7 @@ body {
     padding: 6.5px 13px;
   }
   .about-me-card h1 {
-    font-size: 40px;
+    font-size: 38px;
   }
   .about-me-card h3 {
     font-size: 22px;
@@ -1268,7 +1263,7 @@ body {
     padding: 24px;
   }
   .about-me-card h1 {
-    font-size: 40px;
+    font-size: 38px;
   }
   .about-me-card h3 {
     font-size: 22px;
@@ -1292,7 +1287,7 @@ body {
     padding: 24px;
   }
   .small-text-card p {
-    margin-top: 25px;
+    margin-top: 20px;
   }
   .hardware-card {
     padding: 24px;
@@ -1379,7 +1374,7 @@ body {
     padding: 24px;
   }
   .about-me-card h1 {
-    font-size: 38px;
+    font-size: 36px;
   }
   .about-me-card h3 {
     font-size: 20px;
@@ -1497,7 +1492,7 @@ body {
     padding: 16px;
   }
   .about-me-card h1 {
-    font-size: 34px;
+    font-size: 32px;
   }
   .about-me-card h3 {
     font-size: 18px;
@@ -1672,9 +1667,6 @@ body {
 }
 .dark-mode .twitterx {
   background-color: #000000;
-}
-.dark-mode .twitterx img {
-  scale: 0.4;
 }
 
 .reduced-opacity {
