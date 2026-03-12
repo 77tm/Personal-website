@@ -27,11 +27,11 @@ export default function AboutMeCard(props) {
     return () => window.removeEventListener("resize", updateSpanValue);
   }, []);
 
-  const topText = `Hey! I'm Toms, a Full-Stack Developer based in Riga. I focus on building scalable, production-grade systems that deliver real business value. My work spans backend infrastructure, distributed systems, and modern web applications.`;
+const topText = `Hey! I'm Toms, a Full-Stack Developer based in Riga focused on building scalable, production-grade systems and modern web applications that deliver real business value.`;
 
-  const midText = `I have extensive experience designing and maintaining backend services, working with microservice architectures, Kafka data pipelines, and containerized environments using Kubernetes. On the application side I build modern web interfaces with React while developing robust APIs and services using technologies such as PHP, Laravel, and Drupal. I am comfortable working across the entire stack, from database architecture and system design to frontend performance and UX.`;
+const midText = `I have extensive experience developing backend systems and distributed architectures using microservices, Kafka data pipelines, and containerized infrastructure with Kubernetes. I build modern interfaces with React and develop robust services using PHP, Laravel, and Drupal.`;
 
-  const bottomText = `Beyond traditional web development, I also work with machine learning. I have built CAPTCHA automation solvers using convolutional neural networks (CNNs) that I trained myself, combining deep learning with large-scale automation workflows. I enjoy tackling complex engineering problems, optimizing systems for performance, and continuously pushing my technical boundaries through side projects and experimentation.`;
+const bottomText = `I also work with machine learning, building CAPTCHA automation solvers using convolutional neural networks (CNNs) that I trained myself. I enjoy solving complex engineering problems and constantly pushing my skills through side projects.`;
 
   return (
     <div className={props.className} style={{ gridRow: isBig ? `span ${spanValue + 1}` : `span ${spanValue}` }}>
