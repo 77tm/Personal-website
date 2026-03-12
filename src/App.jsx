@@ -17,7 +17,7 @@ import ferrariWebsite from "/public/ferrari-website.gif"
 
 function App() {
 
-  const [darkMode, setDarkMode] = React.useState(false);
+  const [darkMode, setDarkMode] = React.useState(true);
   const [activeItem, setActiveItem] = React.useState("all");
 
   React.useEffect(() => {
