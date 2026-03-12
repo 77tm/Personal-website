@@ -15,35 +15,28 @@ export default function AboutMeCard(props) {
   useEffect(() => {
     const updateSpanValue = () => {
       if (window.innerWidth <= 545) {
-        setSpanValue(2); // Set spanValue to 2 on mobile
+        setSpanValue(2);
       } else {
-        setSpanValue(1); // Set spanValue to 1 on desktop
+        setSpanValue(1);
       }
     };
 
-    // Call the update function initially
     updateSpanValue();
-
-    // Attach a listener to window resize event
     window.addEventListener("resize", updateSpanValue);
 
-    // Clean up the listener on unmount
     return () => window.removeEventListener("resize", updateSpanValue);
   }, []);
 
-  const topText= "Hey! I'm Toms, and my goal is to work at a company where I can deliver business value while levelling up my skills as a developer."
+  const topText = `Hey! I'm Toms, a Full-Stack Developer based in Riga. I focus on building scalable, production-grade systems that deliver real business value. My work spans backend infrastructure, distributed systems, and modern web applications.`;
 
-  const midText = `As a web developer, I embrace dynamic technology, constantly seeking new challenges to expand my skills. From HTML5, CSS, and JavaScript ES6 
-  to React and backend tech like Laravel and PHP, I stay on top of web trends. Proficient in MySQL, I create impactful applications, driven by a passion for growth 
-  and problem-solving.`
-  
-  const bottomText = `Currently I am studying computer science at the University of Latvia, however it doesn't end there, 
-    I am actively working on side projects in my free time!`
+  const midText = `I have extensive experience designing and maintaining backend services, working with microservice architectures, Kafka data pipelines, and containerized environments using Kubernetes. On the application side I build modern web interfaces with React while developing robust APIs and services using technologies such as PHP, Laravel, and Drupal. I am comfortable working across the entire stack, from database architecture and system design to frontend performance and UX.`;
+
+  const bottomText = `Beyond traditional web development, I also work with machine learning. I have built CAPTCHA automation solvers using convolutional neural networks (CNNs) that I trained myself, combining deep learning with large-scale automation workflows. I enjoy tackling complex engineering problems, optimizing systems for performance, and continuously pushing my technical boundaries through side projects and experimentation.`;
 
   return (
     <div className={props.className} style={{ gridRow: isBig ? `span ${spanValue + 1}` : `span ${spanValue}` }}>
       <h1>Toms Madzuls</h1>
-      <h3>Year 2 Computer science student in Riga</h3>
+      <h3>Full-Stack Developer based in Riga</h3>
       <p>{topText}</p>
       <p style={{ display: isBig ? "block" : "none" }}>{midText}</p>
       {window.innerWidth > 545 && <p style={{ display: isBig ? "block" : "none" }}>{bottomText}</p>}
