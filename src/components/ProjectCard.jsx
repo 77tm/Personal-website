@@ -1,22 +1,18 @@
 import React from "react";
-import skillsData from "../skillsData";
 import { Link } from "react-router-dom";
 
 
 export default function ProjectCard(props) {
-
-    const filteredSkills = props.skillItems ?? skillsData.filter(skill => props.skillsArray.includes(skill.name));
-
     return (
         <article className={props.className}>
             <p>PROJECT</p>
             <h2>{props.projectName}</h2>
-            <p>BUILT WITH</p>
+            {/* <p>BUILT WITH</p>
             <div className="project-card-icons">
                 {filteredSkills.map(elem => {
                    return <img key={elem.name} src={elem.icon} alt={`${elem.name} icon`} loading="lazy" />
                 })}
-            </div>
+            </div> */}
             <div className="project-img-container">
                 {props.projectThumbnail ?? <img src={props.projectImg} alt={props.projectImageAlt} loading="lazy" />}
             </div>

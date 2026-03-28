@@ -429,7 +429,7 @@ body {
   padding: 0;
   font-size: 30px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 .project-card .project-card-icons {
   display: flex;
@@ -442,11 +442,11 @@ body {
 }
 .project-card .project-img-container {
   display: flex;
-  height: 270px;
+  height: 290px;
   width: 202px;
   border-radius: 10px;
   overflow: hidden;
-  margin: 10px 0;
+  margin: auto 0;
   justify-content: start;
   align-items: center;
 }
@@ -503,7 +503,7 @@ body {
   display: flex;
   justify-content: center;
   height: auto;
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .music-card {
@@ -711,8 +711,9 @@ body {
     height: 20px;
   }
   .project-card .project-img-container {
-    height: 210px;
+    height: 230px;
     width: 152px;
+    margin: auto 0;
   }
   .project-page {
     max-width: 1000px;
@@ -817,8 +818,9 @@ body {
     height: 20px;
   }
   .project-card .project-img-container {
-    height: 210px;
+    height: 230px;
     width: 170px;
+    margin: auto 0;
   }
   .project-page {
     max-width: 800px;
@@ -968,8 +970,9 @@ body {
     height: 20px;
   }
   .project-card .project-img-container {
-    height: 210px;
+    height: 230px;
     width: 172px;
+    margin: auto 0;
   }
   .project-page {
     max-width: 500px;
@@ -1167,11 +1170,11 @@ body {
   }
   .project-card .project-img-container {
     display: flex;
-    height: 270px;
+    height: 290px;
     width: 300px;
     border-radius: 10px;
     overflow: hidden;
-    margin: 10px 0;
+    margin: auto 0;
     justify-content: center;
     align-items: center;
   }
