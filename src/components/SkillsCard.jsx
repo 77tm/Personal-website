@@ -13,7 +13,7 @@ export default function SkillsCard(props) {
 
     return (
         <div className={props.className}>
-            <h2>My Toolbox</h2>
+            <h2>Tech stack</h2>
             <div className="skill-container">
                 {skills}
             </div>
