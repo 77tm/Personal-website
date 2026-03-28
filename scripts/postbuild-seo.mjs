@@ -142,7 +142,7 @@ function createProjectStructuredData({ name, pathName, description, image, techn
 const pages = [
   {
     outputDir: "",
-    title: "Toms Madžuls (Toms Madzuls) | Full-Stack Developer in Rīga and Madona",
+    title: "Toms Madzuls",
     description:
       "Portfolio of Toms Madžuls, also written as Toms Madzuls, a full-stack developer and programmētājs from Madona based in Rīga, Latvia.",
     canonicalPath: "/",
