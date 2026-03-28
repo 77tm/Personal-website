@@ -444,6 +444,7 @@ body {
         img {
             height: 30px;
             width: 30px;
+            object-fit: contain;
             margin-right: 20px;
         }
     }
@@ -478,6 +479,13 @@ body {
     position: relative;
     // display: flex;
     // flex-direction: column;
+
+    p {
+        max-width: 24ch;
+        margin: 0 auto;
+        line-height: 1.45;
+        text-wrap: balance;
+    }
 
     .btn-container-small-card {
         display: flex;
@@ -541,6 +549,60 @@ body {
         img {
             max-height: 100%;
             margin-left: -30px;
+        }
+
+        .project-gradient-thumbnail {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform $transitionDelay ease-in-out;
+        }
+
+        .project-thumbnail-emoji {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 74px;
+            height: 74px;
+            border-radius: 999px;
+            font-size: 34px;
+            line-height: 1;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 14px 30px rgba(29, 29, 29, 0.12);
+        }
+
+        .project-thumbnail-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 74px;
+            height: 74px;
+            border-radius: 999px;
+            transition: transform $transitionDelay ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .portfolio-gradient {
+            background:
+                linear-gradient(180deg, #f3eee0 0%, #e7ddd7 34%, #d4c2b8 68%, #bbaaad 100%);
+        }
+
+        .books-gradient {
+            background:
+                linear-gradient(180deg, #f2eeea 0%, #e0d7d0 32%, #bea99e 66%, #978780 100%);
+        }
+
+        .captcha-gradient {
+            background:
+                linear-gradient(180deg, #f2efe2 0%, #dee1e6 36%, #b4bdcb 68%, #8a96a9 100%);
         }
     }
 
@@ -792,6 +854,8 @@ body {
         p{
             font-size: 13.5px;
             margin: 0px 20px;
+            max-width: 26ch;
+            text-wrap: balance;
         }
         
         .btn-container-small-card {
@@ -945,6 +1009,7 @@ body {
     .small-text-card {
         p{
             font-size: 14px;
+            text-wrap: balance;
         }
     }
 
@@ -2142,6 +2207,18 @@ body {
     .project-card {
         p {
             color: rgba(250, 250, 250, 0.6);
+        }
+
+        .portfolio-gradient {
+            background: linear-gradient(180deg, #4b454a 0%, #3d363c 34%, #322f37 68%, #25242a 100%);
+        }
+
+        .books-gradient {
+            background: linear-gradient(180deg, #494541 0%, #3c3836 32%, #322f30 66%, #242224 100%);
+        }
+
+        .captcha-gradient {
+            background: linear-gradient(180deg, #42454b 0%, #353941 36%, #2d3139 68%, #21252c 100%);
         }
     }
     

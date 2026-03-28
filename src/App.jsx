@@ -5,6 +5,7 @@ import Main from "./components/Main"
 
 import ProjectHeader from "./components/ProjectHeader";
 import ProjectPage from "./components/ProjectPage";
+import { captchaCnnTech } from "./captchaCnnTech";
 
 // import portfolioWebsite from "/public/portfolio-website.png"
 import portfolioWebsite from "/public/portfolio.gif"
@@ -13,7 +14,7 @@ import portfolioWebsite from "/public/portfolio.gif"
 import bookslv from "/public/bookslv.gif"
 
 // import ferrariWebsite from "/public/ferrari-website.jpg"
-import ferrariWebsite from "/public/ferrari-website.gif"
+import captchaCnnProject from "/public/captcha_cnn.gif"
 
 function App() {
 
@@ -41,12 +42,12 @@ function App() {
     allowing seamless CRUD operations for adding books, writing reviews, and organizing reading lists. Books.lv is a website, delivering a delightful experience for book enthusiasts 
     and admins alike.`
 
-  const ferrariSubheading = "A simple Ferrari themed page"
-  const ferrariSKills = ["HTML5", "CSS", "JavaScript ES6"];
-  const ferrariDescription = `Ferrari Themed Page is a captivating project that served as my entry point into web development, showcasing my foundational skills in HTML5, CSS, and 
-    JavaScript ES6. This beginner-level project allowed me to explore and experiment with various CSS techniques to create an appealing and immersive Ferrari-themed experience. 
-    While it may be simple, it provided a solid foundation for understanding CSS capabilities and layout design. Ferrari Themed Page reflects my early journey as a web developer, and I 
-    look forward to applying these skills to more complex and exciting projects in the future.`
+  const captchaCnnSubheading = "A custom CNN pipeline for solving real captchas inside a time-sensitive automation workflow.";
+  const captchaCnnDescription = `This project started as a practical machine learning problem: I built a custom CAPTCHA-solving CNN and integrated it into a time-sensitive automation workflow. The runtime pipeline combines scripted data collection, image preprocessing, character segmentation, CNN inference, and final CAPTCHA reconstruction as part of a larger end-to-end system.
+
+  To train the model, I first collected 600 real captchas using an automation script built with Playwright, then turned them into a labeled character dataset. I segmented each 7-character captcha using vertical projection analysis and width-aware splitting and merging logic, and used controlled neighbor leakage to make the crops more realistic and harder for the model. The resulting dataset contains roughly 3.6k labeled character images across 52 uppercase and lowercase classes.
+
+  The model itself is a custom PyTorch CNN with three convolutional blocks, batch normalization, max pooling, and a dropout-regularized classifier head. During training, I used affine augmentation and weighted random sampling to improve robustness and reduce class imbalance. At inference time, I added test-time augmentation and beam search over character probabilities to improve full-word predictions on noisy captchas. The result is a compact end-to-end system that combines automation, data collection, computer vision, and applied deep learning in a way that is both highly practical and technically interesting.`
 
     function ScrollToTop() {
       const { pathname } = useLocation();
@@ -85,10 +86,10 @@ function App() {
           </>
         }/>
 
-        <Route path="/ferrari" element={
+        <Route path="/captcha-cnn" element={
           <>
-            <ProjectHeader projectName="Ferrari page" darkMode={darkMode} setDarkMode={setDarkMode} />
-            <ProjectPage projectName="Ferrari page" projectSubheading={ferrariSubheading} image={ferrariWebsite} skillsArray={ferrariSKills} projectDescription={ferrariDescription} />
+            <ProjectHeader projectName="CAPTCHA CNN" darkMode={darkMode} setDarkMode={setDarkMode} />
+            <ProjectPage projectName="CAPTCHA CNN" projectSubheading={captchaCnnSubheading} image={captchaCnnProject} skillItems={captchaCnnTech} projectDescription={captchaCnnDescription} />
           </>
         }/>
       </Routes>

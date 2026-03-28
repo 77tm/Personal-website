@@ -337,6 +337,7 @@ body {
 .skills-card .skill-container img {
   height: 30px;
   width: 30px;
+  object-fit: contain;
   margin-right: 20px;
 }
 
@@ -452,6 +453,51 @@ body {
 .project-card .project-img-container img {
   max-height: 100%;
   margin-left: -30px;
+}
+.project-card .project-img-container .project-gradient-thumbnail {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease-in-out;
+}
+.project-card .project-img-container .project-thumbnail-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 999px;
+  font-size: 34px;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 30px rgba(29, 29, 29, 0.12);
+}
+.project-card .project-img-container .project-thumbnail-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 999px;
+  transition: transform 0.4s ease-in-out;
+}
+.project-card .project-img-container .project-thumbnail-link:hover {
+  transform: scale(1.05);
+}
+.project-card .project-img-container .portfolio-gradient {
+  background: linear-gradient(180deg, #f3eee0 0%, #e7ddd7 34%, #d4c2b8 68%, #bbaaad 100%);
+}
+.project-card .project-img-container .books-gradient {
+  background: linear-gradient(180deg, #f2eeea 0%, #e0d7d0 32%, #bea99e 66%, #978780 100%);
+}
+.project-card .project-img-container .captcha-gradient {
+  background: linear-gradient(180deg, #f2efe2 0%, #dee1e6 36%, #b4bdcb 68%, #8a96a9 100%);
 }
 .project-card .project-btn {
   display: flex;
@@ -1647,6 +1693,15 @@ body {
 }
 .dark-mode .project-card p {
   color: rgba(250, 250, 250, 0.6);
+}
+.dark-mode .project-card .portfolio-gradient {
+  background: linear-gradient(180deg, #4b454a 0%, #3d363c 34%, #322f37 68%, #25242a 100%);
+}
+.dark-mode .project-card .books-gradient {
+  background: linear-gradient(180deg, #494541 0%, #3c3836 32%, #322f30 66%, #242224 100%);
+}
+.dark-mode .project-card .captcha-gradient {
+  background: linear-gradient(180deg, #42454b 0%, #353941 36%, #2d3139 68%, #21252c 100%);
 }
 .dark-mode .instagram {
   background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);

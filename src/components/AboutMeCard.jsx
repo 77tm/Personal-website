@@ -27,11 +27,11 @@ export default function AboutMeCard(props) {
     return () => window.removeEventListener("resize", updateSpanValue);
   }, []);
 
-const topText = `Hey! I'm Toms, a Full-Stack Developer based in Riga focused on building scalable, production-grade systems and modern web applications that deliver real business value.`;
+const topText = `Hi, I'm Toms, a Full-Stack Developer based in Riga, focused on building scalable, production-ready systems and modern web applications that create real business value.`;
 
-const midText = `I have extensive experience developing backend systems and distributed architectures using microservices, Kafka data pipelines, and containerized infrastructure with Kubernetes. I build modern interfaces with React and develop robust services using PHP, Laravel, and Drupal.`;
+const midText = `My experience includes backend systems and distributed architectures built with microservices, Kafka-based data pipelines, and containerized infrastructure on Kubernetes. I also create modern interfaces with React and robust services using PHP, Laravel, and Drupal.`;
 
-const bottomText = `I also work with machine learning, building CAPTCHA automation solvers using convolutional neural networks (CNNs) that I trained myself. I enjoy solving complex engineering problems and constantly pushing my skills through side projects.`;
+const bottomText = `I also build automation tools and work with machine learning, developing CAPTCHA solvers powered by convolutional neural networks (CNNs). I enjoy tackling complex engineering problems and developing my skills through side projects.`;
 
   return (
     <div className={props.className} style={{ gridRow: isBig ? `span ${spanValue + 1}` : `span ${spanValue}` }}>

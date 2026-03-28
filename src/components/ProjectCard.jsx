@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function ProjectCard(props) {
 
-    const filteredSkills = skillsData.filter(skill => props.skillsArray.includes(skill.name));
+    const filteredSkills = props.skillItems ?? skillsData.filter(skill => props.skillsArray.includes(skill.name));
 
     return (
         <div className={props.className}>
@@ -18,7 +18,7 @@ export default function ProjectCard(props) {
                 })}
             </div>
             <div className="project-img-container">
-                <img src={props.projectImg} alt="project-image" />
+                {props.projectThumbnail ?? <img src={props.projectImg} alt="project-image" />}
             </div>
             <div className="project-btn">
                 <Link className="projects-btn" to={props.projectLink}>

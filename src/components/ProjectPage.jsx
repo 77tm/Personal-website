@@ -2,7 +2,7 @@ import React from "react";
 import skillsData from "../skillsData";
 
 export default function ProjectPage(props) {
-    const filteredSkills = skillsData.filter(skill => props.skillsArray.includes(skill.name));
+    const filteredSkills = props.skillItems ?? skillsData.filter(skill => props.skillsArray.includes(skill.name));
 
     return (
         <div className="project-page">
