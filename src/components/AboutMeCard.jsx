@@ -4,11 +4,13 @@ export default function AboutMeCard(props) {
   const [isBig, setIsBig] = useState(false);
   const [spanValue, setSpanValue] = useState(1);
 
-  const handleClick = () => {
+  const handleClick = (event) => {
+    event.preventDefault();
     setIsBig((prev) => !prev);
   };
 
-  const handleWorkBtnClick = () => {
+  const handleWorkBtnClick = (event) => {
+    event.preventDefault();
     props.setActiveItem("projects");
   };
 

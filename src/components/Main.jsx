@@ -49,7 +49,7 @@ export default function Main({activeItem, setActiveItem}) {
 
 
     return (
-        <div className="main-container">
+        <main className="main-container">
 
             {activeItem === "all" && (
             <>
@@ -58,9 +58,9 @@ export default function Main({activeItem, setActiveItem}) {
                 <SkillsCard className="skills-card"/>
                 <SmallTextCard setActiveItem={setActiveItem} className='small-text-card' title="Since 2020" text={sinceText} />
                 <HardwareCard className="hardware-card"/>
-                <ProjectCard className="project-card" projectName="Portfolio" projectImg={portfolioWebsite} projectThumbnail={portfolioThumbnail} skillsArray={portfolioSkills} projectLink="/portfolio" />
-                <ProjectCard className="project-card" projectName="Books.lv" projectImg={bookslv} projectThumbnail={booksThumbnail} skillsArray={bookslvSkills} projectLink="/bookslv" />
-                <ProjectCard className="project-card" projectName="CNN" projectImg={captchaCnnImage} projectThumbnail={captchaThumbnail} skillItems={captchaCnnTech} projectLink="/captcha-cnn" />
+                <ProjectCard className="project-card" projectName="Portfolio" projectImg={portfolioWebsite} projectThumbnail={portfolioThumbnail} skillsArray={portfolioSkills} projectLink="/portfolio" projectImageAlt="Preview of the portfolio website built by Toms Madžuls" />
+                <ProjectCard className="project-card" projectName="Books.lv" projectImg={bookslv} projectThumbnail={booksThumbnail} skillsArray={bookslvSkills} projectLink="/bookslv" projectImageAlt="Preview of the Books.lv application built by Toms Madžuls" />
+                <ProjectCard className="project-card" projectName="CNN" projectImg={captchaCnnImage} projectThumbnail={captchaThumbnail} skillItems={captchaCnnTech} projectLink="/captcha-cnn" projectImageAlt="Preview of the CAPTCHA CNN project built by Toms Madžuls" />
                 <SocialCard name="instagram" className='social-card instagram' icon={instagram} link="https://www.instagram.com/madzuls/"/>
                 <SocialCard name="facebook" className='social-card facebook' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>
                 <SocialCard name="github" className='social-card github' icon={github} link="https://github.com/77tm"/>
@@ -83,9 +83,9 @@ export default function Main({activeItem, setActiveItem}) {
 
                 {/* reduced opacity */}
                 <HardwareCard className="hardware-card reduced-opacity"/>
-                <ProjectCard className="project-card reduced-opacity" projectName="Portfolio" projectImg={portfolioWebsite} projectThumbnail={portfolioThumbnail} skillsArray={portfolioSkills} projectLink="/portfolio" />
-                <ProjectCard className="project-card reduced-opacity" projectName="Books.lv" projectImg={bookslv} projectThumbnail={booksThumbnail} skillsArray={bookslvSkills} projectLink="/bookslv" />
-                <ProjectCard className="project-card reduced-opacity" projectName="CNN" projectImg={captchaCnnImage} projectThumbnail={captchaThumbnail} skillItems={captchaCnnTech} projectLink="/captcha-cnn" />
+                <ProjectCard className="project-card reduced-opacity" projectName="Portfolio" projectImg={portfolioWebsite} projectThumbnail={portfolioThumbnail} skillsArray={portfolioSkills} projectLink="/portfolio" projectImageAlt="Preview of the portfolio website built by Toms Madžuls" />
+                <ProjectCard className="project-card reduced-opacity" projectName="Books.lv" projectImg={bookslv} projectThumbnail={booksThumbnail} skillsArray={bookslvSkills} projectLink="/bookslv" projectImageAlt="Preview of the Books.lv application built by Toms Madžuls" />
+                <ProjectCard className="project-card reduced-opacity" projectName="CNN" projectImg={captchaCnnImage} projectThumbnail={captchaThumbnail} skillItems={captchaCnnTech} projectLink="/captcha-cnn" projectImageAlt="Preview of the CAPTCHA CNN project built by Toms Madžuls" />
             </>
             )}
 
@@ -94,9 +94,9 @@ export default function Main({activeItem, setActiveItem}) {
                 <AboutMeCard className="about-me-card" setActiveItem={setActiveItem} />
                 <SocialCard name="github" className='social-card github' icon={github} link="https://github.com/77tm"/>
                 <SkillsCard className="skills-card"/>
-                <ProjectCard className="project-card" projectName="Portfolio" projectImg={portfolioWebsite} projectThumbnail={portfolioThumbnail} skillsArray={portfolioSkills} projectLink="/portfolio" />
-                <ProjectCard className="project-card" projectName="Books.lv" projectImg={bookslv} projectThumbnail={booksThumbnail} skillsArray={bookslvSkills} projectLink="/bookslv" />
-                <ProjectCard className="project-card" projectName="CNN" projectImg={captchaCnnImage} projectThumbnail={captchaThumbnail} skillItems={captchaCnnTech} projectLink="/captcha-cnn" />
+                <ProjectCard className="project-card" projectName="Portfolio" projectImg={portfolioWebsite} projectThumbnail={portfolioThumbnail} skillsArray={portfolioSkills} projectLink="/portfolio" projectImageAlt="Preview of the portfolio website built by Toms Madžuls" />
+                <ProjectCard className="project-card" projectName="Books.lv" projectImg={bookslv} projectThumbnail={booksThumbnail} skillsArray={bookslvSkills} projectLink="/bookslv" projectImageAlt="Preview of the Books.lv application built by Toms Madžuls" />
+                <ProjectCard className="project-card" projectName="CNN" projectImg={captchaCnnImage} projectThumbnail={captchaThumbnail} skillItems={captchaCnnTech} projectLink="/captcha-cnn" projectImageAlt="Preview of the CAPTCHA CNN project built by Toms Madžuls" />
 
                 {/* reduced opacity */}
                 <HardwareCard className="hardware-card reduced-opacity"/>
@@ -122,9 +122,9 @@ export default function Main({activeItem, setActiveItem}) {
                 <ImageCard className="img-card reduced-opacity" />
                 <SkillsCard className="skills-card reduced-opacity"/>
                 <HardwareCard className="hardware-card reduced-opacity"/>
-                <ProjectCard className="project-card reduced-opacity" projectName="Portfolio" projectImg={portfolioWebsite} projectThumbnail={portfolioThumbnail} skillsArray={portfolioSkills} projectLink="/portfolio" />
-                <ProjectCard className="project-card reduced-opacity" projectName="Books.lv" projectImg={bookslv} projectThumbnail={booksThumbnail} skillsArray={bookslvSkills} projectLink="/bookslv" />
-                <ProjectCard className="project-card reduced-opacity" projectName="CNN" projectImg={captchaCnnImage} projectThumbnail={captchaThumbnail} skillItems={captchaCnnTech} projectLink="/captcha-cnn" />
+                <ProjectCard className="project-card reduced-opacity" projectName="Portfolio" projectImg={portfolioWebsite} projectThumbnail={portfolioThumbnail} skillsArray={portfolioSkills} projectLink="/portfolio" projectImageAlt="Preview of the portfolio website built by Toms Madžuls" />
+                <ProjectCard className="project-card reduced-opacity" projectName="Books.lv" projectImg={bookslv} projectThumbnail={booksThumbnail} skillsArray={bookslvSkills} projectLink="/bookslv" projectImageAlt="Preview of the Books.lv application built by Toms Madžuls" />
+                <ProjectCard className="project-card reduced-opacity" projectName="CNN" projectImg={captchaCnnImage} projectThumbnail={captchaThumbnail} skillItems={captchaCnnTech} projectLink="/captcha-cnn" projectImageAlt="Preview of the CAPTCHA CNN project built by Toms Madžuls" />
                 <SmallTextCard setActiveItem={setActiveItem} className='small-text-card reduced-opacity' title="Since 2020" text={sinceText} />
 
             </>
@@ -140,15 +140,15 @@ export default function Main({activeItem, setActiveItem}) {
 
                 {/* reduced opacity */}
                 <AboutMeCard className="about-me-card reduced-opacity" setActiveItem={setActiveItem} />
-                <ProjectCard className="project-card reduced-opacity" projectName="Portfolio" projectImg={portfolioWebsite} projectThumbnail={portfolioThumbnail} skillsArray={portfolioSkills} projectLink="/portfolio" />
-                <ProjectCard className="project-card reduced-opacity" projectName="Books.lv" projectImg={bookslv} projectThumbnail={booksThumbnail} skillsArray={bookslvSkills} projectLink="/bookslv" />
-                <ProjectCard className="project-card reduced-opacity" projectName="CNN" projectImg={captchaCnnImage} projectThumbnail={captchaThumbnail} skillItems={captchaCnnTech} projectLink="/captcha-cnn" />
+                <ProjectCard className="project-card reduced-opacity" projectName="Portfolio" projectImg={portfolioWebsite} projectThumbnail={portfolioThumbnail} skillsArray={portfolioSkills} projectLink="/portfolio" projectImageAlt="Preview of the portfolio website built by Toms Madžuls" />
+                <ProjectCard className="project-card reduced-opacity" projectName="Books.lv" projectImg={bookslv} projectThumbnail={booksThumbnail} skillsArray={bookslvSkills} projectLink="/bookslv" projectImageAlt="Preview of the Books.lv application built by Toms Madžuls" />
+                <ProjectCard className="project-card reduced-opacity" projectName="CNN" projectImg={captchaCnnImage} projectThumbnail={captchaThumbnail} skillItems={captchaCnnTech} projectLink="/captcha-cnn" projectImageAlt="Preview of the CAPTCHA CNN project built by Toms Madžuls" />
                 <ImageCard className="img-card reduced-opacity" />
                 <SocialCard name="instagram" className='social-card instagram reduced-opacity' icon={instagram} link="https://www.instagram.com/madzuls/"/>
                 <SocialCard name="facebook" className='social-card facebook reduced-opacity' icon={facebook} link="https://www.facebook.com/toms.madzuls/"/>
                 <SocialCard name="linkedin" className='social-card linkedin reduced-opacity' icon={linkedin} link="https://www.linkedin.com/in/toms-mad%C5%BEuls-ba5a56239/"/>
             </>
             )}
-        </div>
+        </main>
     )
 }

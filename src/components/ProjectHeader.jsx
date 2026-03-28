@@ -17,7 +17,7 @@ export default function ProjectHeader({projectName, darkMode, setDarkMode}) {
                 <div className="toggle-container" onClick={switchMode}>
                     <div className={darkMode ? "switch dark" : "switch light"}>
                         <div className="toggle">    
-                            <img src={darkMode ? moon : sun} loading="lazy" />
+                            <img src={darkMode ? moon : sun} loading="lazy" alt="Theme switch icon" />
                         </div>
                     </div>
                 </div>

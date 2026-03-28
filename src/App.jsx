@@ -2,10 +2,12 @@ import React from "react"
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header"
 import Main from "./components/Main"
+import Seo from "./components/Seo";
 
 import ProjectHeader from "./components/ProjectHeader";
 import ProjectPage from "./components/ProjectPage";
 import { captchaCnnTech } from "./captchaCnnTech";
+import { bookslvSeo, captchaCnnSeo, homeSeo, portfolioSeo } from "./seo";
 
 // import portfolioWebsite from "/public/portfolio-website.png"
 import portfolioWebsite from "/public/portfolio.gif"
@@ -42,12 +44,10 @@ function App() {
     allowing seamless CRUD operations for adding books, writing reviews, and organizing reading lists. Books.lv is a website, delivering a delightful experience for book enthusiasts 
     and admins alike.`
 
-  const captchaCnnSubheading = "A custom CNN pipeline for solving real captchas inside a time-sensitive automation workflow.";
-  const captchaCnnDescription = `This project started as a practical machine learning problem: I built a custom CAPTCHA-solving CNN and integrated it into a time-sensitive automation workflow. The runtime pipeline combines scripted data collection, image preprocessing, character segmentation, CNN inference, and final CAPTCHA reconstruction as part of a larger end-to-end system.
+  const captchaCnnSubheading = "CNN pipeline for solving captchas in an automated workflow.";
+  const captchaCnnDescription = `This project focused on building a custom CAPTCHA-solving CNN and integrating it into a time-sensitive automation workflow. I collected real captchas with Playwright, prepared a labeled character dataset, and built a pipeline for preprocessing, segmentation, model inference, and final CAPTCHA reconstruction.
 
-  To train the model, I first collected 600 real captchas using an automation script built with Playwright, then turned them into a labeled character dataset. I segmented each 7-character captcha using vertical projection analysis and width-aware splitting and merging logic, and used controlled neighbor leakage to make the crops more realistic and harder for the model. The resulting dataset contains roughly 3.6k labeled character images across 52 uppercase and lowercase classes.
-
-  The model itself is a custom PyTorch CNN with three convolutional blocks, batch normalization, max pooling, and a dropout-regularized classifier head. During training, I used affine augmentation and weighted random sampling to improve robustness and reduce class imbalance. At inference time, I added test-time augmentation and beam search over character probabilities to improve full-word predictions on noisy captchas. The result is a compact end-to-end system that combines automation, data collection, computer vision, and applied deep learning in a way that is both highly practical and technically interesting.`
+  The model was developed in PyTorch with data augmentation and prediction improvements to make it more reliable on noisy real-world inputs. The result is a practical end-to-end system that combines automation, computer vision, and machine learning in one workflow.`
 
     function ScrollToTop() {
       const { pathname } = useLocation();
@@ -67,6 +67,7 @@ function App() {
       <Routes>
         <Route path="/" element={
           <>
+            <Seo {...homeSeo} />
             <Header activeItem={activeItem} setActiveItem={setActiveItem} darkMode={darkMode} setDarkMode={setDarkMode} />
             <Main activeItem={activeItem} setActiveItem={setActiveItem} />
           </>
@@ -74,22 +75,46 @@ function App() {
 
         <Route path="/portfolio" element={
           <>
+            <Seo {...portfolioSeo} />
             <ProjectHeader projectName="Portfolio" darkMode={darkMode} setDarkMode={setDarkMode} />
-            <ProjectPage projectName="Portfolio" projectSubheading={portfolioSubheading} image={portfolioWebsite} skillsArray={portfolioSkills} projectDescription={portfolioDescription} />
+            <ProjectPage
+              projectName="Portfolio"
+              projectSubheading={portfolioSubheading}
+              image={portfolioWebsite}
+              imageAlt="Preview of the personal portfolio website built by Toms Madžuls"
+              skillsArray={portfolioSkills}
+              projectDescription={portfolioDescription}
+            />
           </>
         }/>
 
         <Route path="/bookslv" element={
           <>
+            <Seo {...bookslvSeo} />
             <ProjectHeader projectName="Books.lv" darkMode={darkMode} setDarkMode={setDarkMode} />
-            <ProjectPage projectName="Books.lv" projectSubheading={bookslvSubheading} image={bookslv} skillsArray={bookslvSkills} projectDescription={bookslvDescription} />
+            <ProjectPage
+              projectName="Books.lv"
+              projectSubheading={bookslvSubheading}
+              image={bookslv}
+              imageAlt="Preview of the Books.lv web application created by Toms Madžuls"
+              skillsArray={bookslvSkills}
+              projectDescription={bookslvDescription}
+            />
           </>
         }/>
 
         <Route path="/captcha-cnn" element={
           <>
+            <Seo {...captchaCnnSeo} />
             <ProjectHeader projectName="CAPTCHA CNN" darkMode={darkMode} setDarkMode={setDarkMode} />
-            <ProjectPage projectName="CAPTCHA CNN" projectSubheading={captchaCnnSubheading} image={captchaCnnProject} skillItems={captchaCnnTech} projectDescription={captchaCnnDescription} />
+            <ProjectPage
+              projectName="CAPTCHA CNN"
+              projectSubheading={captchaCnnSubheading}
+              image={captchaCnnProject}
+              imageAlt="Demonstration of the CAPTCHA CNN automation pipeline built by Toms Madžuls"
+              skillItems={captchaCnnTech}
+              projectDescription={captchaCnnDescription}
+            />
           </>
         }/>
       </Routes>

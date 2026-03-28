@@ -8,7 +8,7 @@ export default function ProjectCard(props) {
     const filteredSkills = props.skillItems ?? skillsData.filter(skill => props.skillsArray.includes(skill.name));
 
     return (
-        <div className={props.className}>
+        <article className={props.className}>
             <p>PROJECT</p>
             <h2>{props.projectName}</h2>
             <p>BUILT WITH</p>
@@ -18,13 +18,13 @@ export default function ProjectCard(props) {
                 })}
             </div>
             <div className="project-img-container">
-                {props.projectThumbnail ?? <img src={props.projectImg} alt="project-image" />}
+                {props.projectThumbnail ?? <img src={props.projectImg} alt={props.projectImageAlt} loading="lazy" />}
             </div>
             <div className="project-btn">
-                <Link className="projects-btn" to={props.projectLink}>
+                <Link className="projects-btn" to={props.projectLink} aria-label={`View the ${props.projectName} project by Toms Madžuls`}>
                     <span>View project</span>
                 </Link>
             </div>
-        </div>
+        </article>
     )
 }

@@ -1,0 +1,16 @@
+{
+  "name": "Toms Madzuls",
+  "short_name": "Toms Madzuls",
+  "description": "Portfolio of Toms Madzuls, a full-stack developer from Madona based in Rīga, Latvia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#1c1c1e",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}
